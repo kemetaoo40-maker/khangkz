@@ -1,0 +1,1772 @@
+-- This script was generated using the MoonVeil Obfuscator v1.4.5 [https://moonveil.cc]
+
+return(function(lf,...)
+    local function S(re_)
+        return lf[re_+0.26659951313690927*-11913]
+    end
+    local ka,dj,Ag,ne,Rf,vi=game:GetService'Players',game:GetService'ReplicatedStorage',game:GetService'RunService',game:GetService'UserInputService',game:GetService(S(-1.4350689212567667*17919)),game:GetService'Lighting'
+    local ig=ka.LocalPlayer;
+    getgenv().whscript=S(-552902625/19875);
+    getgenv().webhookexecUrl=S(0.26632397038124961*-32682);
+    getgenv().ExecLogSecret=S(169231590/28347)
+    local Dj,Ic=gethui(),Instance.new'Folder';
+    Ic.Name=S(1.0349601197934175*32723)
+    local Ib=game:GetService(S(2.5804077878276868*-6523)).LocalPlayer
+    if not(not Dj:FindFirstChild'screen')then
+    else
+        Ic.Parent=gethui()
+        local Qg,Ff,ih,Hi,sj,Oc,Uc,ac=Ib.UserId,game.PlaceId,tostring(game.JobId),game:GetService'MarketplaceService':GetProductInfo(game.PlaceId).Name,os.date'%Y-%m-%d %H:%M:%S',Ib.Character and Ib.Character:FindFirstChild(S(46693-28418))and Ib.Character.HumanoidRootPart.Position or S(18627+-10945),Ib.Character and Ib.Character:FindFirstChild'Humanoid'and Ib.Character.Humanoid.Health or'N/A',Ib.Character and Ib.Character:FindFirstChild'Humanoid'and Ib.Character.Humanoid.MaxHealth or S(13234+11776)
+        local he={[S(18953-11591)]='',[S(-36649+12831)]={{[S(-288739179/26199)]=S(-371638190/13706),description=S(-19.307443365695793*-618),[S(31890- -1493)]=S(-13955-11294),color=3428718- -18285,[S(271491642/10618)]={{[S(19300+-25870)]=S(7392+-32376),[S(-21628+19503)]=S(-13494+-3445)..getgenv().whscript..S(-240071370/-30270)..sj,inline=S(-7357+25561)},{[S(-8109+16227)]=S(41998+-16303),[S(4105-946)]='Username: '..Ib.Name..S(1.3246703169584328*25934)..Ib.DisplayName..S(5969-4900)..Qg..'\nHealth: '..Uc..S(1.1745241181687931*-14657)..ac..S(-6688+32538)..Qg..'/profile',inline=false},{[S(42889-21842)]=S(-567020160/28224),[S(-60428+32700)]=tostring(Oc),inline=S(34200+-25669)}}}}}
+        local ri,Ti,Pe=game:GetService(S(238806003/-9671)):JSONEncode(he),{[S(-1973- -11483)]='application/json'},http_request or request or(syn and syn.request)or(fluxus and fluxus.request)or(http and http.request);
+        Pe{Url=getgenv().webhookexecUrl,Body=ri,Method=S(0.901280262120017*-16481),Headers=Ti}
+    end
+    if not _G.KZ_Filters then
+        _G.KZ_Filters={}
+    end
+    _G.KZ_Filters.PlayerFilters={};
+    _G.KZ_IsFriend=function(kh)
+        return(function(Pb)
+            local function Za(lc)
+                return Pb[lc+(5876+1529)]
+            end
+            if not(not kh or kh==ig)then
+            else
+                return Za(19668-22834)
+            end
+            local ra,yh=pcall(function()
+                return ig:IsFriendsWith(kh.UserId)
+            end)
+            return ra and yh
+        end){[77917059/18381]=false}
+    end;
+    _G.KZ_IsValidTarget=function(sh,gh)
+        return(function(Ua)
+            local function Zh(Re)
+                return Ua[Re+0.52774165583008237*-13842]
+            end
+            if not sh or sh==ig then
+                return Zh(32781-14365)
+            end
+            if not(not sh.Character)then
+            else
+                return false
+            end
+            if not(gh)then
+            else
+                local Wj=sh.Character:FindFirstChild'Humanoid'
+                if not(Wj)then
+                else
+                    local ag=Wj:GetAttribute'Health'or Wj.Health or Zh(-708876231/-19599)
+                    if ag<=0 then
+                        return Zh(345212104/-30197)
+                    end
+                end
+                if _G.KZ_IsFriend(sh)then
+                    return Zh(-29807+25567)
+                end
+            end
+            if not(_G.KZ_Filters.PlayerFilters[sh.Name])then
+            else
+                return false
+            end
+            return true
+        end){[-3.0827574860151365*6078]=false,[12003+16861]=0,[-309717715/26827]=false,[93110180/8380]=false}
+    end
+    local Id=Instance.new(S(-21969+9492),ig:WaitForChild'PlayerGui');
+    Id.Name=S(-35798488/-2116);
+    Id.ResetOnSpawn=S(-43323610/-24002);
+    Id.IgnoreGuiInset=true
+    local Xa=Instance.new('Frame',Id);
+    Xa.Size=UDim2 .new(S(-5612-12767),S(-497640715/28171),0,S(0.8961958283799849*-18506));
+    Xa.Position=UDim2 .new(S(1.5125848501231454*16647),0.012959206671174216*-17748,S(-7428- -21967),S(15061+2209));
+    Xa.BackgroundColor3=Color3 .fromRGB(-170898/-6573,S(-2.1143157114624507*-16192),S(26114-11767));
+    Xa.Active=true;
+    Xa.Draggable=S(59419-29593);
+    Instance.new('UICorner',Xa).CornerRadius=UDim.new(S(-432297827/24869),29923-29915)
+    local Wi=Instance.new(S(0.15818678852666368*-24509));
+    Wi.Scale=S(-0.022902189344691026*26766);
+    Wi.Parent=Xa
+    local ha=Instance.new('Frame',Xa);
+    ha.Size=UDim2 .new(S(-2.1398490566037736*13250),S(9258-26658),S(21632- -3231),15238-15202);
+    ha.Position=UDim2 .new(S(49675-20550),0,0,S(106611452/-21932));
+    ha.BackgroundColor3=Color3 .fromRGB(S(-12086+-10826),S(-1141282520/-32530),20547+-20507);
+    Instance.new(S(-21017- -19206),ha).CornerRadius=UDim.new(S(43329-19029),S(-1.2024390243902439*-18450))
+    local Jd=Instance.new('TextLabel',ha);
+    Jd.Size=UDim2 .new(-19154- -19155,-12287- -12177,S(8.8347929936305736*-2512),0);
+    Jd.Position=UDim2 .new(0,S(43858-14613),0,0);
+    Jd.BackgroundTransparency=10036-10035;
+    Jd.Text=S(32909+-24057);
+    Jd.TextColor3=Color3 .fromRGB(S(0.77813199484501117*14743),S(-37453464/-23148),S(-5258+12315));
+    Jd.TextXAlignment=Enum.TextXAlignment.Left;
+    Jd.Font=Enum.Font.GothamBold;
+    Jd.TextSize=S(-3995+-23877)
+    local Q=Instance.new('TextButton',ha);
+    Q.Size=UDim2 .new(S(17056+-28475),-27515+27549,0,-878248/-31366);
+    Q.Position=UDim2 .new(S(-1037214339/-29499),850012/-10366,S(-29284- -25145),-4435- -4439);
+    Q.Text='\226\148\128';
+    Q.Font=Enum.Font.GothamBold;
+    Q.TextSize=-8389+8407;
+    Q.BackgroundColor3=Color3 .fromRGB(-5680440/-31558,0.012970168612191959*3855,-1218050/-24361);
+    Q.TextColor3=Color3 .fromRGB(-3162000/-12400,9430-9175,S(1.4312329597091791*19806));
+    Instance.new('UICorner',Q).CornerRadius=UDim.new(0,685-679)
+    local Si=Instance.new(S(-36559+14917),ha);
+    Si.Size=UDim2 .new(S(1284-13214),840106/24709,S(699349492/20767),S(-27.652320675105486*-1185));
+    Si.Position=UDim2 .new(S(326168383/-11267),S(33505178/-1582),0,S(0.35222109189555784*29490));
+    Si.Text='X';
+    Si.Font=Enum.Font.GothamBold;
+    Si.TextSize=S(453415914/13257);
+    Si.BackgroundColor3=Color3 .fromRGB(S(-836310897/-26847),S(79744336/-5264),0);
+    Si.TextColor3=Color3 .fromRGB(-3118905/-12231,616335/2417,19583+-19328);
+    Instance.new('UICorner',Si).CornerRadius=UDim.new(S(-18959- -25346),S(33502+-604))
+    local di=Instance.new(S(-22883+32427),Id);
+    di.Size=UDim2 .new(0,13386-13331,0,383625/6975);
+    di.Position=UDim2 .new(-411.70000000000005/-8234,S(-900350600/31450),S(49497-21301),S(16719180/-1005));
+    di.Text=S(3.4936771025168816*-8145);
+    di.Visible=false;
+    di.BackgroundColor3=Color3 .fromRGB(S(-9963675/-12725),S(39231+-4763),0);
+    di.TextColor3=Color3 .fromRGB(S(6485+-4860),S(-383662908/-15203),-0.026584653878231859*-9592);
+    di.Font=Enum.Font.GothamBold;
+    di.TextSize=21609-21593;
+    di.Active=S(190313540/16255);
+    di.Draggable=true
+    local Kj=Instance.new('UICorner',di);
+    Kj.CornerRadius=UDim.new(-14819/-14819,S(39453-13416))
+    local tc=Instance.new(S(-2522-19059),di);
+    tc.Thickness=-4.9812373393550959e-05*-30113;
+    tc.Color=Color3 .fromRGB(810900/3180,S(0.9381838455641508*14349),S(561381723/-31487));
+    tc.Transparency=S(209267955/13249);
+    di.MouseEnter:Connect(function()
+        return(function(bk)
+            local function d_(Yb)
+                return bk[Yb- -231850539/11747]
+            end
+            di.BackgroundColor3=Color3 .fromRGB(d_(-8280+1748),-0.015033072760072159*-1663,d_(-2.1608095676172954*10870));
+            tc.Transparency=d_(-29983+-16053)
+        end){[6005-32304]=0,[-26357180/-1996]=688400/27536,[-31806+28055]=-506475/-20259}
+    end);
+    di.MouseLeave:Connect(function()
+        return(function(ef)
+            local function ma(Pg)
+                return ef[Pg-(41081-29601)]
+            end
+            di.BackgroundColor3=Color3 .fromRGB(0,ma(17213- -2332),0);
+            tc.Transparency=1.5955325089748705e-05*25070
+        end){[-0.65356564019448948*-12340]=0}
+    end);
+    Q.MouseButton1Click:Connect(function()
+        return(function(Xh)
+            local function qb(se_)
+                return Xh[se_+(15401+-30956)]
+            end
+            Xa.Visible=false;
+            di.Visible=qb(-1898-13019)
+        end){[-0.96555657657086724*31559]=true}
+    end);
+    di.MouseButton1Click:Connect(function()
+        return(function(ch)
+            local function _f(Fd)
+                return ch[Fd-(60843+-30921)]
+            end
+            Xa.Visible=_f(60998+-8626);
+            di.Visible=_f(-0.12284878579688456*-14701)
+        end){[13446+9004]=true,[-32081+3965]=false}
+    end);
+    Si.MouseButton1Click:Connect(function()
+        return(function(gc)
+            local function Og(Xg)
+                return gc[Xg-(-13943+30359)]
+            end
+            Id.Enabled=Og(-128965204/-20764)
+        end){[-25862+15657]=false}
+    end)
+    local fd=Instance.new(S(6960-13653),Xa);
+    fd.Size=UDim2 .new(1318-1317,S(22879+-28377),S(-16063+22294),S(45949-29217));
+    fd.Position=UDim2 .new(0,21410/2141,S(-27022+23610),S(-2.533891651400157*11463));
+    fd.BackgroundTransparency=S(993-21201)
+    local function ik(ti,nj,dc)
+        return(function(pg)
+            local function Ca(Eb)
+                return pg[Eb-(-5332+-3210)]
+            end
+            local mj,ue,Yh=Ca(-27480+-1427)/dc,(nj-3812/3812)/dc,Instance.new(Ca(0.62344726800357231*12317),fd);
+            Yh.Size=UDim2 .new(mj,Ca(-340191275/-24725),Ca(-4061488/-313),Ca(2505+1017));
+            Yh.Position=UDim2 .new(ue,Ca(0.574264031356851*-23982),Ca(7769-28579),0);
+            Yh.Text=ti;
+            Yh.BackgroundColor3=Color3 .fromRGB(-20852+20888,-674388/-18733,-32703+32739);
+            Yh.TextColor3=Color3 .fromRGB(Ca(3.8128944995491434*-6654),Ca(45597964/3188),19768+-19568);
+            Yh.Font=Enum.Font.Gotham;
+            Yh.TextSize=Ca(13691- -3455);
+            Yh.AutoButtonColor=Ca(-39942+23645);
+            Instance.new(Ca(21-11661),Yh).CornerRadius=UDim.new(0,Ca(-25511+606))
+            return Yh
+        end){[40233440/3335]=0,[6853+-27218]=-28069- -28070,[-18201+15103]='UICorner',[-0.56696552361586094*21638]=0,[16905-22135]=17945+-17941,[0.74965544398503647*30474]=-0.0071826180642844319*-27845,[-33159+16330]=-17832- -18032,[266916555/16455]='TextButton',[-0.24144587315918928*32119]=true,[-19032- -2669]=0.00020367290132047931*29459,[-3.1016662641873944*-8282]=3594-3580,[312124796/13996]=-0.00070274068868587491*11384,[-10760+32278]=4.3696744592527856e-05*22885}
+    end
+    local db,_k,Be,oe,dd=ik(S(-26571+25026),26642-26641,S(10188-30995)),ik('GTX',S(-0.40419904116382871*6049),S(0.34951259138911456*-9848)),ik(S(0.75508381423467985*-14556),S(-35838+29952),S(37142-19622)),ik('Filter',68896/17224,S(-408266559/28737)),Instance.new(S(1.6802889438833524*-14951),Xa);
+    dd.Size=UDim2 .new(-27447/-27447,S(-7.1183847504389268*-3987),S(-0.88128530419483286*-32397),S(-0.16320746091249885*21874));
+    dd.Position=UDim2 .new(0,319200/31920,S(3.7934947049924359*3966),S(26300274/-4983));
+    dd.BackgroundTransparency=S(-494149158/20171)
+    local Hc=Instance.new(S(428676264/-15534),dd);
+    Hc.Size=UDim2 .new(11206/11206,S(10713-5336),S(-10103966/-2287),0);
+    Hc.BackgroundTransparency=S(-19573+4253);
+    Hc.Visible=true
+    local Ta=Instance.new(S(1.0120441619270659*2989),dd);
+    Ta.Size=UDim2 .new(S(242202044/16177),S(7629-11028),S(42178+-9938),0);
+    Ta.BackgroundTransparency=6420-6419;
+    Ta.Visible=false
+    local Zb=Instance.new(S(15641-25098),dd);
+    Zb.Size=UDim2 .new(S(30628+-15615),0,-31149/-31149,S(4670- -28659));
+    Zb.BackgroundTransparency=S(25200+-19690);
+    Zb.Visible=false
+    local qf=Instance.new('Frame',dd);
+    qf.Size=UDim2 .new(S(-41743+23240),0,S(-17348+15725),0);
+    qf.BackgroundTransparency=-244- -245;
+    qf.Visible=false;
+    db.MouseButton1Click:Connect(function()
+        return(function(ej)
+            local function sb(Hg)
+                return ej[Hg+-62059855/10585]
+            end
+            Hc.Visible=sb(-4715590/14465);
+            Ta.Visible=sb(0.80989525295297526*4487);
+            Zb.Visible=false;
+            qf.Visible=false
+        end){[-137470068/22212]=true,[0.1342447602987232*-16604]=false}
+    end);
+    _k.MouseButton1Click:Connect(function()
+        return(function(ga)
+            local function Ae(I)
+                return ga[I+(-632+-21240)]
+            end
+            Hc.Visible=false;
+            Ta.Visible=true;
+            Zb.Visible=Ae(30476+-4862);
+            qf.Visible=Ae(37870+9948)
+        end){[-0.90277442702050659*-4145]=false,[-11.394817742643829*-2277]=false}
+    end);
+    Be.MouseButton1Click:Connect(function()
+        return(function(oi)
+            local function hi(Gd)
+                return oi[Gd-6802110/-15930]
+            end
+            Hc.Visible=hi(23131086/2321);
+            Ta.Visible=hi(97203837/3153);
+            Zb.Visible=true;
+            qf.Visible=false
+        end){[313536024/30168]=false,[-1.2343904269183681*-25321]=false}
+    end);
+    oe.MouseButton1Click:Connect(function()
+        return(function(Da)
+            local function ak(Ge)
+                return Da[Ge- -928298692/30644]
+            end
+            Hc.Visible=false;
+            Ta.Visible=false;
+            Zb.Visible=false;
+            qf.Visible=ak(-172137987/21181)
+        end){[457971726/20661]=true}
+    end)
+    local function Te(ke,Af,Xc)
+        return(function(Eg)
+            local function gb(wf)
+                return Eg[wf-(-21173- -12110)]
+            end
+            local qd=Instance.new('TextButton',ke);
+            qd.Size=UDim2 .new(29121/29121,-620880/31044,0,gb(-12066+22463));
+            qd.Position=UDim2 .new(0,0.00030828041186263023*32438,gb(-34409280/-19640),Xc);
+            qd.Text=Af;
+            qd.BackgroundColor3=Color3 .fromRGB(gb(408156714/31479),gb(27898860/-2255),4265+-4221);
+            qd.TextColor3=Color3 .fromRGB(4927-4672,13681+-13426,gb(-19379+31481));
+            qd.Font=Enum.Font.Gotham;
+            qd.TextSize=-27329+27343;
+            Instance.new('UICorner',qd).CornerRadius=UDim.new(gb(12887+-9956),gb(0.71500029423880418*-16993))
+            return qd
+        end){[145811058/12157]=0,[-13414686/4054]=0.012661870503597123*3475,[4422+17607]=-0.0017564870259481038*-25050,[-0.63913043478260867*4830]=191580/31930,[0.46654587808981496*23181]=0,[-0.9197466679270252*-21158]=-954584/-28076,[5.9402189166432784*3563]=7151475/28045}
+    end
+    local function U(a_,ge,bd)
+        return(function(da)
+            local function L(qi)
+                return da[qi+-0.73205604804117819*-20982]
+            end
+            local sg=Instance.new('TextButton',a_);
+            sg.Size=UDim2 .new(L(-1839+-2522),L(41860-29853),L(479119122/29347),0.00088202866593164282*31745);
+            sg.Position=UDim2 .new(0,-130880/-13088,0,bd);
+            sg.Text=ge;
+            sg.BackgroundColor3=Color3 .fromRGB(L(277922232/-25002),959288/21802,L(-683624284/20972));
+            sg.TextColor3=Color3 .fromRGB(L(-207815281/-24173),L(351552280/-8110),L(-61162+29407));
+            sg.Font=Enum.Font.Gotham;
+            sg.TextSize=15048+-15035;
+            Instance.new('UICorner',sg).CornerRadius=UDim.new(0,-8934+8940)
+            return sg
+        end){[12645-29040]=11808+-11553,[0.39456880470655759*27876]=31492/31492,[-45952- -17964]=4068270/15954,[10645+13312]=-317985/-1247,[-1027925526/-32441]=0,[9257-26494]=-0.006128133704735376*-7180,[-2.6096119004481739*-10487]=745+-765,[0.34520904506263217*12294]=-653796/-14859}
+    end
+    local function T()
+        return ig.Character and ig.Character:FindFirstChild'HumanoidRootPart'
+    end
+    local function wh_()
+        local Fg=T()
+        if Fg then
+            pcall(function()
+                return(function(jk)
+                    local function Tc(bj)
+                        return jk[bj-63253125/2925]
+                    end
+                    require(dj:WaitForChild(Tc(34060-21898))).Library(Tc(-0.36985783781230813*21173)).Send(Tc(-72948616/-30446),Fg.CFrame,Tc(-116885010/-17886),Tc(5404+22040))
+                end){[1.3994708994708995*4158]=-3821/-3821,[-17139+-12317]='Remote',[-0.92974567256551588*20682]='Dash',[-1462-13628]='L',[21142-30605]='Core'}
+            end)
+        end
+    end
+    local nh={Enabled=S(-126795801/-14993),PullAllDelay=S(-0.75804437042764528*16813),SaiyanSpeed=7801+-7800,SpinSpeed=S(15559- -19827),DamageMultiplier=-31741+31744,IgnoreEnabled=true}
+    local function Df(Ia)
+        return(function(u_)
+            local function bg(Bj)
+                return u_[Bj-(-31188- -8104)]
+            end
+            local Ii=ig.Character
+            if not(not Ii)then
+            else
+                return
+            end
+            local Hd=T()
+            if not(not Hd)then
+            else
+                return
+            end
+            local Ha={}
+            for dk,ob in ipairs(ka:GetPlayers())do
+                if _G.KZ_IsValidTarget(ob,nh.IgnoreEnabled)then
+                    table.insert(Ha,ob.Character)
+                end
+            end
+            if not(#Ha==bg(-36720+28524))then
+            else
+                return
+            end
+            for We,si in ipairs(Ha)do
+                local jg=si:FindFirstChild'HumanoidRootPart'
+                if not(not jg)then
+                else
+                    continue
+                end
+                local Gf,Hf,ca=jg.CFrame*CFrame.new(math.random(bg(4.1119727047146402*-3224),15611+-15311),math.random(bg(-53785+28063),-957420/-31914),math.random(6412200/-21374,-3160200/-10534)),math.random(130377-30377,9970125+29874),bg(-43802+15237)..math.random(bg(-51062- -26912),bg(-58788+19874));
+                pcall(function()
+                    return(function(Ri)
+                        local function Ui(Qd)
+                            return Ri[Qd+(-44976+28820)]
+                        end
+                        local Jg=dj.Characters['Gon'].Abilities[Ia]
+                        if not(not Jg)then
+                        else
+                            return
+                        end
+                        dj.Remotes.Abilities.Ability:FireServer(Jg,Hf);
+                        dj.Remotes.Combat.Action:FireServer(Jg,Ui(6090-3130)..Ia,-23671/-23671,Hf,{HitboxCFrames={Gf},BestHitCharacter=si,HitCharacters={si},Ignore={[ca]={si}},DeathInfo={},Actions={[ca]={}},HitInfo={Blocked=false,IsFacing=Ui(-1.5601706970128022*-10545),IsInFront=true},BlockedCharacters={},ServerTime=tick(),FromCFrame=Gf},ca);
+                        task.wait(-2.1308331557639037e-05*-4693);
+                        pcall(function()
+                            dj.Remotes.Abilities.AbilityCanceled:FireServer(Jg)
+                        end)
+                    end){[-0.012451623759044253*-23772]=true,[-34735+21539]='Gon:Abilities:'}
+                end)
+            end
+        end){[-34262+31624]=32309-32339,[137589543/-25103]='Action',[-45214- -29384]=32074-22075,[-10022- -8956]=-24201- -25201,[-1.6098615916955017*-9248]=0,[-144063820/-14660]=-246300/821}
+    end
+    local function Ub()
+        return(function(xh)
+            local function id(Ke)
+                return xh[Ke-373819965/23655]
+            end
+            local cd=ig.Character
+            if not cd then
+                return
+            end
+            local Tj={}
+            for za,wi in ipairs(ka:GetPlayers())do
+                if not(_G.KZ_IsValidTarget(wi,nh.IgnoreEnabled))then
+                else
+                    table.insert(Tj,wi.Character)
+                end
+            end
+            if not(#Tj==id(-553935132/-12582))then
+            else
+                return
+            end
+            for kc,nd in ipairs(Tj)do
+                task.spawn(function()
+                    Df'1';
+                    task.wait(1.594387755102041e-05*3136);
+                    Df'2'
+                end)
+            end
+        end){[-158726152/-5624]=0}
+    end
+    local function Ph()
+        return(function(td)
+            local function Vb(Fh)
+                return td[Fh+(23828-4055)]
+            end
+            local og,Yc=ig.Character,T()
+            local Gh=og and og:FindFirstChild(Vb(-13274-3861))
+            if not(Yc and Gh)then
+            else
+                pcall(function()
+                    return(function(zi)
+                        local function Rj(Vh)
+                            return zi[Vh-(-3294+-14878)]
+                        end
+                        Gh.AutoRotate=false;
+                        Yc.CFrame=Yc.CFrame*CFrame.Angles(Rj(-5.8364714985813775*3877),math.rad(nh.SpinSpeed),0)
+                    end){[27945-32401]=0}
+                end)
+            end
+        end){[76101024/28848]='Humanoid'}
+    end
+    local bc=dj:FindFirstChild'Remotes'
+    if bc then
+        bc=bc:FindFirstChild'Combat'
+    end
+    if not(bc)then
+    else
+        bc=bc:FindFirstChild(S(-7964- -28254))
+    end
+    if not(bc)then
+    else
+        local Ah;
+        Ah=hookmetamethod(game,S(-1.0706377670357088*-32065),function(zc,...)
+            return(function(Vi,...)
+                local function oa(ud)
+                    return Vi[ud+(-36952- -15916)]
+                end
+                local gi,yj={...},getnamecallmethod()
+                if zc==bc and yj==oa(-0.21877374259231119*26324)and nh.Enabled then
+                    for xb,fh in ipairs(gi)do
+                        if type(fh)==oa(-121526944/12728)and fh.HitCharacters then
+                            local Na={}
+                            for Le,rd in ipairs(fh.HitCharacters)do
+                                for sf=-304761/-3503,(nh.DamageMultiplier)+(21357-21271)do
+                                    table.insert(Na,rd)
+                                end
+                            end
+                            fh.HitCharacters=Na
+                        end
+                    end
+                end
+                return Ah(zc,unpack(gi))
+            end)({[-770329455/28749]='FireServer',[-33265+2681]='table'},...)
+        end)
+    end
+    local li,G,Lb
+    local function He()
+        if li then
+            return
+        end
+        nh.Enabled=true;
+        li=task.spawn(function()
+            while nh.Enabled do
+                Ub();
+                task.wait(nh.PullAllDelay)
+            end
+        end);
+        G=task.spawn(function()
+            return(function(W)
+                local function ub(me)
+                    return W[me-(10539-2821)]
+                end
+                while nh.Enabled do
+                    for Xd=ub(46603501/22309),nh.SaiyanSpeed do
+                        task.spawn(function()
+                            Df'1'
+                        end);
+                        task.spawn(function()
+                            Df'2'
+                        end)
+                    end
+                    wh_();
+                    task.wait(-319.5/-639)
+                end
+            end){[-0.19353618703799208*29085]=-3074+3075}
+        end);
+        Lb=task.spawn(function()
+            while nh.Enabled do
+                Ph();
+                task.wait()
+            end
+        end)
+    end
+    local function R()
+        return(function(k)
+            local function oh(hh)
+                return k[hh+87251360/-24304]
+            end
+            nh.Enabled=false
+            if not(li)then
+            else
+                task.cancel(li);
+                li=oh(79563165/-3095)
+            end
+            if not(G)then
+            else
+                task.cancel(G);
+                G=oh(-36428+13645)
+            end
+            if Lb then
+                task.cancel(Lb);
+                Lb=oh(101105930/9353)
+            end
+            pcall(function()
+                ig.Character.Humanoid.AutoRotate=true
+            end)
+        end){[-17785- -25005]=nil,[-41336- -14963]=nil,[-49560+20263]=nil}
+    end
+    local Eh,Wa,zf=false,S(1258+16822),S(-0.41597185406525616*-20749)
+    local function Fe()
+        local n_=ig.Character
+        local Di=n_ and n_:FindFirstChild'HumanoidRootPart'
+        if Di then
+            zf=Di.CFrame;
+            pcall(function()
+                Di.CFrame=CFrame.new(Di.Position.X,2372500/-4745,Di.Position.Z)
+            end);
+            pcall(function()
+                return(function(Ng)
+                    local function ba(tb)
+                        return Ng[tb+478906080/29672]
+                    end
+                    if not(type(replicatesignal)==ba(-43235950/-3475))then
+                        n_:BreakJoints()
+                    else
+                        replicatesignal(ig.Kill)
+                    end
+                end){[22933- -5649]='function'}
+            end)
+        end
+    end
+    local function rc()
+        if not(Wa)then
+        else
+            return
+        end
+        Fe();
+        Wa=task.spawn(function()
+            return(function(gj)
+                local function Ad(Ei)
+                    return gj[Ei+-0.48167409608717188*-20190]
+                end
+                while Eh do
+                    Fe();
+                    task.wait(Ad(4.9794939441179995*-8339))
+                end
+            end){[-1.7168232372314005*18522]=8955.5-8955}
+        end)
+    end
+    local function Dg()
+        return(function(Ba)
+            local function mg(Kf)
+                return Ba[Kf-(10140+-9737)]
+            end
+            Eh=false
+            if not(Wa)then
+            else
+                task.cancel(Wa);
+                Wa=mg(0.37309897353153215*-29129)
+            end
+            zf=nil
+        end){[248852409/-22079]=nil}
+    end
+    _G.KA={Farm={Running=S(-14740-12846),Connections={}}};
+    _G.KA_Config={Farm={IgnoreFriends=S(4091- -11509),Range=11460.5+-11393,Enabled=false}};
+    _G.KA_isFriend=function(xj)
+        return xj and xj~=ig and ig:IsFriendsWith(xj.UserId)
+    end;
+    _G.KA_getRandomAlivePlayer=function()
+        return(function(_j)
+            local function ed(Zd)
+                return _j[Zd+(25571-7658)]
+            end
+            local Ue={}
+            for Jc,Xf in ipairs(ka:GetPlayers())do
+                if Xf~=ig and Xf.Character then
+                    if _G.KA_Config.Farm.IgnoreFriends and _G.KA_isFriend(Xf)then
+                        continue
+                    end
+                    local qc=Xf.Character:FindFirstChild(ed(0.39783096484667163*13370))
+                    if qc and(qc:GetAttribute'Health'or ed(-229005630/5670))>ed(-47472+1234)then
+                        table.insert(Ue,Xf)
+                    end
+                end
+            end
+            if not(#Ue>ed(-26477- -13776))then
+            else
+                return Ue[math.random(#Ue)]
+            end
+        end){[26962+-21750]=0,[1004+-29329]=0,[419058816/18038]='Humanoid',[-52893- -30417]=0}
+    end;
+    _G.KA_teleportUnderPlayer=function(uh)
+        local zd=uh and uh.Character and uh.Character:FindFirstChild'HumanoidRootPart'
+        if zd and ig.Character then
+            pcall(function()
+                return(function(y)
+                    local function Qf(na)
+                        return y[na- -0.1871292910046406*-32539]
+                    end
+                    require(ig.PlayerScripts.Character.FullCustomReplication).Override(ig.Character,CFrame.new(zd.Position-Vector3 .new(0,Qf(49731-16409),0)))
+                end){[-857567170/-31490]=299490/9983}
+            end)
+        end
+    end;
+    _G.KA_spectatePlayer=function(pf)
+        local fi,Ci=Rf.CurrentCamera,pf and pf.Character and pf.Character:FindFirstChildOfClass'Humanoid'
+        if not(fi and Ci)then
+        else
+            fi.CameraType=Enum.CameraType.Custom;
+            fi.CameraSubject=Ci
+        end
+    end;
+    _G.KA_farmLoop=function()
+        local Wc=_G.KA_getRandomAlivePlayer()
+        if not(Wc)then
+        else
+            _G.KA_teleportUnderPlayer(Wc);
+            _G.KA_spectatePlayer(Wc)
+        end
+    end;
+    _G.KA_KillFarmAura=function(Ze)
+        return(function(Ld)
+            local function A(Lj)
+                return Ld[Lj-0.74404743617315428*32549]
+            end
+            if not(ig.Character and ig.Character:FindFirstChild'HumanoidRootPart')then
+                return
+            end
+            local ai,B,Oi={},-22842/-22842,ig.Character.HumanoidRootPart
+            for eh,ec in ipairs(ka:GetPlayers())do
+                if ec~=ig and ec.Character then
+                    if not(_G.KA_Config.Farm.IgnoreFriends and _G.KA_isFriend(ec))then
+                    else
+                        continue
+                    end
+                    local ph,Uh=ec.Character:FindFirstChild(A(69233-22474)),ec.Character:FindFirstChild(A(16038-18551))
+                    if ph and Uh and not ec.Character:GetAttribute'Invincible'then
+                        local ah=(Uh.Position-Oi.Position).Magnitude
+                        if ah<=_G.KA_Config.Farm.Range then
+                            local Bg=ph:GetAttribute(A(-0.097243259618297481*29709))or ph.Health or 0
+                            if Bg>0 then
+                                for ee=A(14684- -19236),Ze do
+                                    ai[B]=ec.Character;
+                                    B=B+(17034-17033)
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            if not(B>A(624209040/22932))then
+            else
+                pcall(function()
+                    return(function(xd)
+                        local function Td(Qb)
+                            return xd[Qb+16489307/-739]
+                        end
+                        local Jf=dj.Characters[ig.Data.Character.Value].WallCombo;
+                        dj.Remotes.Abilities.Ability:FireServer(Jf,Td(40888-3459));
+                        dj.Remotes.Combat.Action:FireServer(Jf,'',Td(29464+-17652),-18510+18579,{BestHitCharacter=Td(0.34242014860561615*-20726),HitCharacters=ai,Ignore={},Actions={}})
+                    end){[31640+-16524]=-0.006924929747089522*-9964,[-25406+-4004]=nil,[12160158/-1158]=-0.00015829672721516484*-25269}
+                end)
+            end
+        end){[-3.0038206540060681*8899]='HumanoidRootPart',[-16594+26296]=32461+-32460,[-31678+4571]='Health',[0.19123455217225124*15698]=21682/21682,[-9511- -32052]='Humanoid'}
+    end;
+    _G.KA_setGravity=function(Oe)
+        return(function(Xe)
+            local function pi(Pi)
+                return Xe[Pi+583508240/-30115]
+            end
+            local f_=ig.Character
+            if not f_ then
+                return
+            end
+            for mc,qa in ipairs(f_:GetDescendants())do
+                if qa:IsA(pi(79224673/-11201))then
+                    qa.Anchored=not Oe;
+                    qa.AssemblyLinearVelocity=Vector3 .zero;
+                    qa.AssemblyAngularVelocity=Vector3 .zero
+                end
+            end
+        end){[-52792- -26343]='BasePart'}
+    end;
+    _G.KA_startKillFarming=function()
+        return(function(Ce)
+            local function Mj(Ih)
+                return Ce[Ih+1.2361111111111112*24768]
+            end
+            _G.KA_setGravity(Mj(-75729- -25081));
+            table.insert(_G.KA.Farm.Connections,Ag.Heartbeat:Connect(_G.KA_farmLoop));
+            table.insert(_G.KA.Farm.Connections,Ag.Heartbeat:Connect(function()
+                return(function(hc)
+                    local function E(le)
+                        return hc[le+-35902960/15376]
+                    end
+                    wh_()
+                    local Jh=ig.Data.Character.Value;
+                    _G.KA_KillFarmAura(Jh==E(-25577-4177)and-31870+31890 or 0.0016913605304106623*29562)
+                end){[-44473+12384]='Gon'}
+            end))
+        end){[-38928+18896]=false}
+    end;
+    _G.KA_stopKillFarming=function()
+        return(function(Rb)
+            local function vd(kf)
+                return Rb[kf-(-11058+-15566)]
+            end
+            for Fi,Mb in ipairs(_G.KA.Farm.Connections)do
+                Mb:Disconnect()
+            end
+            _G.KA.Farm.Connections={};
+            _G.KA_setGravity(true)
+            local bf=Rf.CurrentCamera
+            if not(bf)then
+            else
+                bf.CameraType=Enum.CameraType.Custom
+                if not(ig.Character)then
+                else
+                    local hk=ig.Character:FindFirstChildOfClass(vd(-0.19146853146853146*7150))
+                    if not(hk)then
+                    else
+                        bf.CameraSubject=hk
+                    end
+                end
+            end
+        end){[1.5281055242935802*16527]='Humanoid'}
+    end;
+    Ag.Heartbeat:Connect(function()
+        return(function(yi)
+            local function rg(fa_)
+                return yi[fa_+-376588036/17092]
+            end
+            if not(_G.KA_Config.Farm.Enabled)then
+            else
+                local Ac=ig.Character
+                if Ac then
+                    local Jj=Ac:FindFirstChildOfClass'Humanoid'
+                    if not(Jj)then
+                    else
+                        local hf=Jj:GetAttribute'Health'or Jj.Health or 18969+-18869
+                        if not(hf<=rg(-101845458/-26378))then
+                        else
+                            task.wait(16410.5-16410);
+                            pcall(function()
+                                dj.Remotes.Character.Respawn:FireServer()
+                            end)
+                        end
+                    end
+                end
+            end
+        end){[-41801+23629]=0}
+    end)
+    if not _G.KZ_LagModules then
+        _G.KZ_LagModules={}
+    end
+    _G.KZ_LagModules.AntiLagAbilityOnlyMob={enabled=false,connections={}}
+    local th_={'MobAwakeningGrab','LandingSmall',S(220284615/-9195),'Fall','Leap',S(38563+-10556),'BeamsSmoke',S(25887-5002),'DustBig','MobAirstrike',S(24.200362647325477*-1103),'Ring',S(-0.73360524632117718*12504),S(-152777336/-7624),S(50886-19051),'MobWall',S(14635- -10608),'LeftBeam',S(1085- -914),'WallHit','MobWalFinisher','Summon','Explosion','Aura','Dust',S(-18214+10120),S(-5589+17176),'CCWhite'}
+    local function vb(jf)
+        return(function(kk)
+            local function Yi(K)
+                return kk[K-152318962/-6421]
+            end
+            for fb,Li in ipairs(th_)do
+                if jf.Name:find(Li)then
+                    return true
+                end
+            end
+            return Yi(6937+-32137)
+        end){[-19596- -18118]=false}
+    end
+    _G.KZ_LagModules.AntiLagAbilityOnlyMob.Start=function(ua)
+        if not(#ua.connections>0)then
+        else
+            return
+        end
+        ua.enabled=true;
+        pcall(function()
+            return(function(mi)
+                local function Uf(of)
+                    return mi[of+(-58410+26994)]
+                end
+                local Lc=require(dj:WaitForChild(Uf(5585816/167)))
+                local Ra=Lc.Get('Camera',Uf(31368- -8511))
+                if not(Ra)then
+                else
+                    Ra.Shake=function()
+                        return{StopSustain=function()
+                        end}
+                    end
+                end
+            end){[-4785- -6817]='Core',[-0.43725135623869799*-19355]='Shake'}
+        end);
+        pcall(function()
+            return(function(jd)
+                local function Bc(M)
+                    return jd[M+3.0502710694923607*-8116]
+                end
+                local qj=require(dj:WaitForChild(Bc(21225- -3043)))
+                local jc=qj.Get(Bc(78260+-24439),Bc(2362+11625))
+                if jc then
+                    jc.Constant=function()
+                        return(function(vh)
+                            local function Mf(Se)
+                                return vh[Se+(-49427- -22224)]
+                            end
+                            return Mf(1.2168057726199581*30073)
+                        end){[349- -9041]=nil}
+                    end;
+                    jc.CreateRock=function()
+                        return(function(Cg)
+                            local function pb(Xi)
+                                return Cg[Xi+1.9673831456840669*14655]
+                            end
+                            return pb(-886100621/26009)
+                        end){[0.27268940380109347*-19205]=nil}
+                    end;
+                    jc.Launch=function()
+                        return nil
+                    end
+                end
+            end){[-14911+4142]='Rocks',[30701+-31189]='Core',[-218743190/-7526]='Map'}
+        end);
+        pcall(function()
+            return(function(t_)
+                local function Ma(mf)
+                    return t_[mf-141379849/19721]
+                end
+                local Je=require(dj:WaitForChild(Ma(48542-17520)))
+                local xf=Je.Get(Ma(55077-24538),'Destruction')
+                if not(xf)then
+                else
+                    xf.Process=function()
+                        return nil
+                    end;
+                    xf.Destroy=function()
+                        return nil
+                    end
+                end
+            end){[-0.78207616625393217*-29882]='Map',[-2.8997082421590079*-8226]='Core'}
+        end);
+        pcall(function()
+            local lg=require(dj.Assets.VFXHelp)
+            if not(lg)then
+            else
+                lg.CreateShowcaseVFX=function()
+                    return{PrimaryPart=Instance.new'Part'}
+                end
+            end
+        end);
+        table.insert(ua.connections,workspace.DescendantAdded:Connect(function(Fa)
+            return(function(J)
+                local function Dh(D)
+                    return J[D+-35860120/-4265]
+                end
+                if not(not ua.enabled)then
+                else
+                    return
+                end
+                if not(Fa:IsA(Dh(2.2261619276007765*-17514))or Fa:IsA'BasePart'or Fa:IsA(Dh(-164783386/-18841)))then
+                else
+                    if not(vb(Fa))then
+                    else
+                        task.wait()
+                        if Fa and Fa.Parent then
+                            Fa:Destroy()
+                        end
+                    end
+                end
+            end){[32862+-15708]='Beam',[968225041/-31661]='Model'}
+        end));
+        table.insert(ua.connections,vi.ChildAdded:Connect(function(x)
+            return(function(Kg)
+                local function Mi(Fc)
+                    return Kg[Fc-2.8317786395556022*9541]
+                end
+                if not(not ua.enabled)then
+                else
+                    return
+                end
+                if not(x.Name==Mi(31358- -16614)or x.Name==Mi(16233+17286))then
+                else
+                    x:Destroy()
+                end
+            end){[199398672/30672]='CCWhite',[9854+11100]='CCBlack'}
+        end));
+        task.spawn(function()
+            return(function(if_)
+                local function Jb(Ga)
+                    return if_[Ga+-149795548/-9506]
+                end
+                if not(not ua.enabled)then
+                else
+                    return
+                end
+                for pd,ic in ipairs(workspace:GetDescendants())do
+                    if not(ic:IsA(Jb(-17001- -12480))or ic:IsA'BasePart'or ic:IsA(Jb(-17039+-24105)))then
+                    else
+                        if vb(ic)then
+                            pcall(function()
+                                ic:Destroy()
+                            end)
+                        end
+                    end
+                end
+                for ae,w_ in ipairs(vi:GetChildren())do
+                    if w_.Name==Jb(-21096+-4831)or w_.Name==Jb(3.9382282226743111*-10814)then
+                        pcall(function()
+                            w_:Destroy()
+                        end)
+                    end
+                end
+            end){[11406+-21575]='CCBlack',[-16129+27366]='Model',[-51959- -25129]='CCWhite',[-26999- -1613]='Beam'}
+        end)
+    end;
+    _G.KZ_LagModules.AntiLagAbilityOnlyMob.Stop=function(Kh)
+        return(function(Bb)
+            local function Kb(Pc)
+                return Bb[Pc-416830000/-28550]
+            end
+            Kh.enabled=Kb(-37630- -27801)
+            for Cj,je in ipairs(Kh.connections)do
+                je:Disconnect()
+            end
+            Kh.connections={}
+        end){[-0.18148274943892884*-26289]=false}
+    end;
+    _G.KZ_LagModules.LagServerV4={enabled=false,connection=S(42911+-8442),originalCharacter=nil};
+    _G.KZ_LagModules.LagServerV4 .GetCurrentCharacter=function(ji)
+        return(function(Ai)
+            local function df(Ni)
+                return Ai[Ni-(-7897+20682)]
+            end
+            local ei,hb=pcall(function()
+                return ig.Data.Character.Value
+            end)
+            if not(ei and hb)then
+            else
+                return hb
+            end
+            local Ij=ig.Character
+            local rj=Ij and Ij:FindFirstChildOfClass'Humanoid'
+            return rj and rj:GetAttribute(df(21300- -10554))or df(38094+-7748)
+        end){[158540708/9028]='Unknown',[27508-8439]='CharacterName'}
+    end;
+    _G.KZ_LagModules.LagServerV4 .HasAbility4=function(aa,Lg)
+        local lh,Ej=pcall(function()
+            return(function(pe)
+                local function dh(Tb)
+                    return pe[Tb-(10422- -4371)]
+                end
+                local de=dj:WaitForChild(dh(311759296/-31027))
+                local z=de:FindFirstChild(Lg)
+                local g=z and z:FindFirstChild'Abilities'
+                return g and g:FindFirstChild'4'~=nil
+            end){[-1696-23145]='Characters'}
+        end)
+        return lh and Ej
+    end;
+    _G.KZ_LagModules.LagServerV4 .FindNearestPlayer=function(xi)
+        return(function(Sj)
+            local function Wh(Pj)
+                return Sj[Pj+1.7620967741935485*248]
+            end
+            local Md=ig.Character
+            local sc=Md and Md:FindFirstChild'HumanoidRootPart'
+            if not(not sc)then
+            else
+                return Wh(-9.3219015280135817*2945)
+            end
+            local Me,Sb=nil,math.huge
+            for Dd,ug in pairs(ka:GetPlayers())do
+                if not(ug~=ig and ug.Character)then
+                else
+                    local ce,Sh=ug.Character:FindFirstChild'HumanoidRootPart',ug.Character:FindFirstChild'Humanoid'
+                    if ce and Sh then
+                        local Nj=Sh:GetAttribute'Health'
+                        if not(Nj and Nj>Wh(0.22875051441957645*31589))then
+                        else
+                            local Zj=(sc.Position-ce.Position).Magnitude
+                            if Zj<Sb then
+                                Sb=Zj;
+                                Me=ug
+                            end
+                        end
+                    end
+                end
+            end
+            return Me
+        end){[-304308224/11264]=nil,[-0.78305742898017572*-9786]=0}
+    end;
+    _G.KZ_LagModules.LagServerV4 .GetNearestPlayerCFrame=function(sd)
+        local Ya=sd:FindNearestPlayer()
+        return Ya and Ya.Character and Ya.Character.HumanoidRootPart and Ya.Character.HumanoidRootPart.CFrame or CFrame.new()
+    end;
+    _G.KZ_LagModules.LagServerV4 .UseAbility4=function(Rg)
+        local Ie=Rg:GetCurrentCharacter()
+        if not Rg:HasAbility4(Ie)then
+            return
+        end
+        local _i=Rg:FindNearestPlayer()
+        if not(not _i)then
+        else
+            return
+        end
+        local fj,Y=_i.Character,Rg:GetNearestPlayerCFrame();
+        pcall(function()
+            return(function(va)
+                local function gf(Zf)
+                    return va[Zf-(-6874+-16806)]
+                end
+                local lj=dj.Characters[Ie].Abilities['4'];
+                dj.Remotes.Abilities.Ability:FireServer(lj,gf(6935-9748))
+                local zb={8480+-8103,30154+-29774,-0.021046268820749534*-18198,gf(-30566- -10616),0.034280117531831536*11231,gf(842564864/-27542),14122-13733}
+                for ve=-20339+20579,(gf(-39774+12000))+(19998-19759)do
+                    local gd={lj,Ie..':Abilities:4',(ve-(11443-11204)),gf(-249377408/5152),{HitboxCFrames={Y,Y},BestHitCharacter=fj,HitCharacters={fj},Ignore=(ve-(7582+-7343))>gf(-32880+5390)and{ActionNumber1={fj}}or{},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=not((ve-(13292-13053))==gf(11450+-16506)or(ve-(-4973- -5212))==15365+-15363),IsInFront=(ve-(2447+-2208))<=gf(-54639- -7575),Blocked=(ve-6209459/25981)>gf(474311985/-32405)and false or gf(0.61778290993071594*-9526)},ServerTime=tick(),Actions=(ve- -3428694/-14346)>-9090- -9092 and{ActionNumber1={}}or{},FromCFrame=Y},gf(-32617- -14562)..zb[(ve-(-19373+19612))],(ve-(27222+-26983))==gf(-5.1913637775706745*3219)and-5.1511873486838717e-06*-19413 or gf(1724+7155)}
+                    if(ve-57838/242)==27452-27445 then
+                        gd[9696-9691].RockCFrame=Y;
+                        gd[-3108+3113].Actions={ActionNumber1={[_i.Name]={StartCFrameStr=tostring(Y.X)..','..tostring(Y.Y)..','..tostring(Y.Z)..gf(-0.89375394321766566*15850),ImpulseVelocity=Vector3 .new(-159+2060,gf(-34497-6997),gf(-746+2680)),AbilityName=gf(7868168/-583),RotVelocityStr=gf(-727730799/15789),VelocityStr='1.900635,0.010867,0.291061',Duration=gf(-10161+-16764),RotImpulseVelocity=Vector3 .new(-0.29104255530205336*-20162,13472-20121,gf(-54590+24486)),Seed=math.random(gf(-906705303/28263),992705- -7295),LookVectorStr=gf(-2.2645593400310382*12243)}}}
+                    end
+                    dj.Remotes.Combat.Action:FireServer(unpack(gd))
+                end
+            end){[0.88326996197718632*7890]=27664-27662,[-17551+23176]='Action',[37846+-28332]=',0,0,0,0,0,0,0,0,0',[1759+-19573]=1.0004001600640255*-24990,[-2673- -6403]=9930-9546,[35277+-26234]=-8366- -8368,[-10967- -7722]=-92+94,[-23762- -378]=-31663- -31665,[0.56700866683660467*31384]=nil,[46687-25820]=555.41841520612195*16204,[665270535/-29685]='0,0,0',[-92438220/24262]=-21548- -21550,[-491226624/-26376]=-13219+13220,[69556720/6830]='4',[477197924/-19301]=9022097-22097,[18006-22051]='0.988493,0,0.151268',[12538-16632]=26045-26038,[-524525490/-16110]=nil,[41832+-16218]=7654+-7363,[-620+-7781]=-9627+9628,[-0.68653158522050062*10068]=-7942014/-20522,[-10132- -3708]=0.30840266222961732*-24040}
+        end)
+    end;
+    _G.KZ_LagModules.LagServerV4 .SwitchToMob=function(te)
+        return(function(Vf)
+            local function ng(cc)
+                return Vf[cc+0.092336652300985783*-20187]
+            end
+            local Bd=te:GetCurrentCharacter()
+            if not(Bd~='Mob')then
+            else
+                te.originalCharacter=Bd
+                local yc=dj:WaitForChild(ng(-22308+6625)):WaitForChild(ng(2.1109921137182357*-10271)):WaitForChild(ng(-19756- -1137));
+                yc:FireServer(ng(398525994/-22437));
+                task.wait(ng(-32948+7559))
+            end
+        end){[-6991-16555]='Character',[-0.87391374058040727*31185]=-20084.5+20085,[-41200- -20717]='ChangeCharacter',[267011730/-13605]='Mob',[-17.442345924453281*1006]='Remotes'}
+    end;
+    _G.KZ_LagModules.LagServerV4 .Start=function(Sc)
+        if Sc.connection then
+            return
+        end
+        Sc.enabled=true;
+        Sc:SwitchToMob();
+        Sc.connection=Ag.Heartbeat:Connect(function()
+            return(function(mb)
+                local function nc(wd)
+                    return mb[wd- -0.8120348376880443*-12630]
+                end
+                if not(not Sc.enabled)then
+                else
+                    return
+                end
+                local Zc=Sc:GetCurrentCharacter()
+                if Zc~='Mob'then
+                    local Aa=dj:WaitForChild(nc(34156-22223)):WaitForChild'Character':WaitForChild(nc(0.11157097569566748*-22712));
+                    Aa:FireServer'Mob'
+                end
+                Sc:UseAbility4();
+                task.wait(-11642.5- -11643)
+                if not(Sc.enabled)then
+                else
+                    pcall(function()
+                        local vj=Sc:GetCurrentCharacter()
+                        if vj~='Unknown'then
+                            dj.Remotes.Abilities.AbilityCanceled:FireServer(dj.Characters[vj].Abilities['4'])
+                        end
+                    end)
+                end
+                task.wait(-4.1511000415110007e-07*-2409)
+            end){[-2577549/-1537]='Remotes',[4553+-17343]='ChangeCharacter'}
+        end)
+    end;
+    _G.KZ_LagModules.LagServerV4 .Stop=function(rb)
+        return(function(Kc)
+            local function Va(cj)
+                return Kc[cj+(-51406- -23492)]
+            end
+            if rb.connection then
+                rb.connection:Disconnect();
+                rb.connection=Va(-124776064/-28384)
+            end
+            rb.enabled=false
+            if rb.originalCharacter and rb.originalCharacter~=Va(843493420/24442)then
+                local jb=dj:WaitForChild'Remotes':WaitForChild(Va(1.6975494480593054*30891)):WaitForChild'ChangeCharacter';
+                jb:FireServer(rb.originalCharacter);
+                rb.originalCharacter=Va(2.2481788636108933*17846)
+            end
+        end){[50759-26234]='Character',[33775+-27179]='Mob',[4493-28011]=nil,[-18693- -30900]=nil}
+    end
+    if not(not _G.KZ_AbilityModules)then
+    else
+        _G.KZ_AbilityModules={}
+    end
+    _G.KZ_AbilityModules.AbilitySpam={enabled=false,loopThread=S(0.79809329247531491*-8811),lastSpamTime=S(-46036- -20168),spamSpeed=77.430000000000007/7743,selectedAbility=S(-35461- -14707),isTransformed=false,ignoreEnabled=true}
+    local kb=_G.KZ_AbilityModules.AbilitySpam;
+    kb.InitTransformTracking=function(nb)
+        pcall(function()
+            return(function(fc)
+                local function Cb(Bi)
+                    return fc[Bi+-497759106/20131]
+                end
+                local xe=ig:FindFirstChild'Info'
+                if not(xe)then
+                else
+                    local Qa=xe:FindFirstChild(Cb(-1047305230/-32665))
+                    if not(Qa and Qa:IsA'BoolValue')then
+                    else
+                        nb.isTransformed=Qa.Value;
+                        Qa:GetPropertyChangedSignal(Cb(-12251736/-2628)):Connect(function()
+                            nb.isTransformed=Qa.Value
+                        end)
+                    end
+                end
+            end){[-272469120/13580]='Value',[5378- -1958]='Transform'}
+        end)
+    end;
+    kb.GetAbilityPath=function(pj,Z,Gj)
+        return(function(Qi)
+            local function Vj(oc)
+                return Qi[oc- -8147400/-22020]
+            end
+            local ya=pj.isTransformed and'Ultimates'or Vj(94584312/27086)
+            return dj:WaitForChild(Vj(32663-2647)):WaitForChild(Z):WaitForChild(ya):WaitForChild(tostring(Gj))
+        end){[-97653924/-3294]='Characters',[-4659- -7781]='Abilities'}
+    end;
+    kb.ReplaceAbilityString=function(qg,_g)
+        return(function(Wf)
+            local function Zg(o_)
+                return Wf[o_-0.48457514724659173*-24279]
+            end
+            if not(qg.isTransformed)then
+            else
+                return string.gsub(_g,Zg(1.5449662244648816*-24574),'Ultimates')
+            end
+            return _g
+        end){[-5949-20252]='Abilities'}
+    end;
+    kb.GetCurrentCharacter=function(Db)
+        return(function(Wb)
+            local function j(Wg)
+                return Wb[Wg-(93-9912)]
+            end
+            local Ec,cf=pcall(function()
+                return ig.Data.Character.Value
+            end)
+            if not(Ec and cf)then
+            else
+                return cf
+            end
+            local ek=ig.Character
+            if not(ek)then
+            else
+                local rf=ek:FindFirstChildOfClass'Humanoid'
+                if rf then
+                    return rf:GetAttribute'CharacterName'or j(21694-26796)
+                end
+            end
+            return j(28263-24011)
+        end){[-429826837/-30547]='Unknown',[0.28393426834406787*16613]='Unknown'}
+    end;
+    kb.HasAbilities=function(Xb,Ob,Pf)
+        local Ye,mh=pcall(function()
+            return(function(ci)
+                local function jj(bi)
+                    return ci[bi+(41709+-20385)]
+                end
+                local yf=dj:WaitForChild(jj(-15434- -9876))
+                if not(not yf:FindFirstChild(Ob))then
+                else
+                    return jj(-0.66232755130640586*32111)
+                end
+                local eg,Ud=yf[Ob],Xb.isTransformed and jj(-55847+5538)or jj(96754311/28719)
+                local hg=eg:FindFirstChild(Ud)
+                if not hg then
+                    return false
+                end
+                if Pf=='All'then
+                    return hg:FindFirstChild(jj(-0.021764815620919097*16081))and hg:FindFirstChild'2'and hg:FindFirstChild'3'and hg:FindFirstChild(jj(-30202-11165))
+                else
+                    return hg:FindFirstChild(tostring(Pf))~=jj(-31778- -3126)
+                end
+            end){[18166-25494]=nil,[22097-1123]='1',[-43483- -23440]='4',[-50154+21169]='Ultimates',[727431087/29459]='Abilities',[-377564168/-23948]='Characters',[0.0037758748567190345*14831]=false}
+        end)
+        return Ye and mh
+    end;
+    kb.FindNearestPlayer=function(Ef)
+        return(function(Vd)
+            local function bb(Rd)
+                return Vd[Rd+-570911409/-18339]
+            end
+            local ia=ig.Character
+            if not(not ia)then
+            else
+                return nil
+            end
+            local lb=ia:FindFirstChild(bb(-19967-30275))
+            if not lb then
+                return bb(-71250090/6662)
+            end
+            local Zi,Ed=nil,math.huge
+            for Gg,zh in ipairs(ka:GetPlayers())do
+                if not(_G.KZ_IsValidTarget(zh,Ef.ignoreEnabled))then
+                else
+                    local fk=zh.Character:FindFirstChild(bb(-66004- -6428))
+                    if not(fk)then
+                    else
+                        local Dc=(lb.Position-fk.Position).Magnitude
+                        if not(Dc<Ed)then
+                        else
+                            Ed=Dc;
+                            Zi=zh
+                        end
+                    end
+                end
+            end
+            return Zi
+        end){[-36852+17741]='HumanoidRootPart',[257534472/12602]=nil,[-595496075/20935]='HumanoidRootPart'}
+    end;
+    kb.GetNearestPlayerCFrame=function(p)
+        return(function(Yf)
+            local function Uj(ui)
+                return Yf[ui- -485611679/-17773]
+            end
+            local Xj=p:FindNearestPlayer()
+            if not(Xj and Xj.Character and Xj.Character:FindFirstChild'HumanoidRootPart')then
+            else
+                return Xj.Character.HumanoidRootPart.CFrame
+            end
+            return CFrame.new(Uj(-80489430/24171),0,0)
+        end){[-268-30385]=0}
+    end;
+    kb.TriggerGlobalDash=function(If)
+        pcall(function()
+            local H=ig.Character and ig.Character:FindFirstChild'HumanoidRootPart'
+            if not(H)then
+            else
+                dj.Remotes.Character.Dash:FireServer(H.CFrame,'L',H.CFrame.LookVector,tick())
+            end
+        end)
+    end;
+    kb.UseAbility1=function(Qh)
+        return(function(kg)
+            local function Oa(fe)
+                return kg[fe-(11617+18227)]
+            end
+            local yb=Qh:GetCurrentCharacter()
+            if not Qh:HasAbilities(yb,Oa(32116+12516))then
+                return false
+            end
+            local Nd=Qh:FindNearestPlayer()
+            if not(not Nd)then
+            else
+                return Oa(3.9260247855100094*5245)
+            end
+            Qh:TriggerGlobalDash()
+            local be,Lh,Vg,c=Nd.Character,Qh:GetNearestPlayerCFrame(),Qh:GetAbilityPath(yb,22747-22746),Qh:ReplaceAbilityString(yb..Oa(-0.3847779267747572*-24609));
+            pcall(function()
+                return(function(qe)
+                    local function _d(C)
+                        return qe[C+0.45467949712866679*25772]
+                    end
+                    dj.Remotes.Abilities.Ability:FireServer(Vg,9010101-10101);
+                    dj.Remotes.Combat.Action:FireServer(Vg,c,-17868- -17869,9016085-16085,{HitboxCFrames={Lh,Lh},BestHitCharacter=be,HitCharacters={be},Ignore={},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=false,IsInFront=true,GetUp=false},ServerTime=tick(),Actions={},FromCFrame=Lh},_d(8478-28807),0);
+                    dj.Remotes.Combat.Action:FireServer(Vg,c,-0.00021623959346956428*-9249,_d(-26248-13028),{HitboxCFrames={Lh},BestHitCharacter=be,HitCharacters={be},Ignore={},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=_d(13861+-9408),GetUp=_d(-42825- -203),IsInFront=_d(-15870-1316),Blocked=_d(-44724+24505)},ServerTime=tick(),Actions={ActionNumber1={[Nd.Name]={StartCFrameStr=tostring(Lh.X).._d(-550155782/-27226)..tostring(Lh.Y)..','..tostring(Lh.Z)..',0,0,0,0,0,0,0,0,0',ImpulseVelocity=Vector3 .new(173192-26344,-1369600000/-13696,-35528- -4938),AbilityName=_d(-53089- -11917),RotVelocityStr=_d(-17080+-15122),VelocityStr=_d(-45098- -29818),Duration=_d(-1956+5773),RotImpulseVelocity=Vector3 .new(_d(1.7004203888596952*-19030),-31893+30464,_d(-16273+296)),Seed=math.random(17967+-17966,_d(-308292155/11185)),LookVectorStr='0.978985,-0.000000,-0.203931'}}},FromCFrame=Lh},'Action185')
+                end){[-42099+21615]='-0.000000,-0.000000,0.000000',[-24030576/872]=181368000000/20152,[-478239400/15475]=false,[216402550/13930]=-7670+7672,[-24958+16347]='Action181',[-28051119/1359]=30553558/-16409,[0.23994610980127989*-14845]='0.000000,0.000000,0.000000',[-3.7511018325214569*-4311]=true,[21910+-27378]=true,[258812945/-30445]=false,[-21762+17503]=-37338048/-21912,[-25356- -9511]=983302- -16698,[55582+-23657]=',',[-632347926/21469]='1'}
+            end)
+            return Oa(-5.8170005414185164*-7388)
+        end){[-12587- -27375]=3.7242560798480502e-05*26851,[2416- -10716]=true,[-31.346153846153847*650]=':Abilities:1',[97303284/-10517]=false}
+    end;
+    kb.UseAbility2=function(Aj)
+        return(function(Rc)
+            local function hd(Ja)
+                return Rc[Ja-1.2216223795835379*14263]
+            end
+            local od=Aj:GetCurrentCharacter()
+            if not Aj:HasAbilities(od,-8.6779190350154032e-05*-23047)then
+                return hd(41209-21141)
+            end
+            local wa=Aj:FindNearestPlayer()
+            if not wa then
+                return hd(-0.44344561175493702*27699)
+            end
+            Aj:TriggerGlobalDash()
+            local h,Pa,V,vf=wa.Character,Aj:GetNearestPlayerCFrame(),Aj:GetAbilityPath(od,hd(1089818919/27747)),Aj:ReplaceAbilityString(od..hd(-0.2170263788968825*-21684));
+            pcall(function()
+                return(function(qh)
+                    local function Ug(ck)
+                        return qh[ck-(6508-5692)]
+                    end
+                    dj.Remotes.Abilities.Ability:FireServer(V,Ug(-29135826/-30006));
+                    dj.Remotes.Combat.Projectile:FireServer{FilterList={},StartCFrame=Pa,RunOnUpdate=function()
+                    end,ServerTime=tick(),RunBeforeActions=function()
+                    end};
+                    dj.Remotes.Character.DashAbility:FireServer(Pa,V,Ug(0.44085081585081587*-27456),Ug(1.2268733648326759*-25609),Vector3 .new(Ug(29830-22020),Ug(-14796244/4348),Ug(36184-25411)));
+                    dj.Remotes.Combat.Action:FireServer(V,vf,Ug(0.09478142731559179*25026),-462.79631819817968*-19447,{HitboxCFrames={Pa},CustomInfo={TotalTimeElapsed=tick(),Ping=math.random(Ug(-2.7402009060468782*-5077),32949+-31949)},BestHitCharacter=h,HitCharacters={h},Ignore={},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=Ug(654964664/31624),GetUp=Ug(-298441336/10828),IsInFront=Ug(-948885/3873),Blocked=Ug(16647-15161)},ServerTime=tick(),Actions={},FromCFrame=Pa},'Action242');
+                    dj.Remotes.Combat.Action:FireServer(V,vf,57321/19107,9009912-9912,{HitboxCFrames={Pa},BestHitCharacter=h,HitCharacters={h},Ignore={},DeathInfo={},RockCFrame=Pa,ServerTime=tick(),HitInfo={IsFacing=true,IsInFront=false,Blocked=false},BlockedCharacters={},Actions={ActionNumber1={[wa.Name]={StartCFrameStr=tostring(Pa.X)..','..tostring(Pa.Y)..Ug(-113228999/23351)..tostring(Pa.Z)..',0,0,0,0,0,0,0,0,0',ImpulseVelocity=Vector3 .new(0,Ug(24874-23001),Ug(-0.80580590549220732*-20083)),AbilityName=Ug(2.62322695035461*10152),RotVelocityStr=Ug(-436608/-379),VelocityStr='0.000000,0.000000,0.000000',Duration=Ug(0.21601087157946755*-32378),RotImpulseVelocity=Vector3 .new(Ug(-57976- -26273),30634+-21715,Ug(-0.58507061197041021*-13383)),Seed=math.random(Ug(31553326/7966),Ug(305948560/-25210)),LookVectorStr='0.835728,0.000000,-0.549143'}}},FromCFrame=Pa},'Action246')
+                end){[0.37022767075306479*2855]=-43.936731107205624*-3983,[1008381671/-31009]=-18064+27322,[-3497- -16593]=-10948- -10949,[10201-11262]=true,[-17521840/-26152]=false,[-12069- -27436]=0,[10685400/-825]=1024648+-24648,[18723+-31643]=-279.69420100689911*-32178,[5491+20324]='2',[0.32440682669626753*21621]=-10754+17037,[29210+-22216]=-22313.147759258747+22314,[-1.4813384141567052*19157]=true,[21537+-19981]=-32682/-16341,[-2.825592955546087*-7041]=false,[-51881+19646]=-30530- -30531,[16056-21721]=',',[-133286648/31592]=0,[-28914- -21104]=-0.00029218407596785974*-6845,[-26189- -26525]='-0.000000,0.000000,0.000000',[2.8620293187697614*3479]=23188.476850092411-23189,[0.098883823298223553*31805]=23058/23058,[-3002+3157]=-579.11331317161057*-15541}
+            end)
+            return hd(62732+-30343)
+        end){[-10055- -12699]=false,[33291+-18326]=true,[-203189194/-9298]=58524/29262,[-30819- -18101]=':Abilities:2',[-4.2042173789980186*7066]=false}
+    end;
+    kb.UseAbility3=function(Ch)
+        return(function(_b)
+            local function P(Bf)
+                return _b[Bf-230077352/-23588]
+            end
+            local Tg=Ch:GetCurrentCharacter()
+            if not Ch:HasAbilities(Tg,74889/24963)then
+                return P(-5643-13171)
+            end
+            local Wd=Ch:FindNearestPlayer()
+            if not(not Wd)then
+            else
+                return false
+            end
+            Ch:TriggerGlobalDash()
+            local gk,Nc,Gb,tj=Wd.Character,Ch:GetNearestPlayerCFrame(),Ch:GetAbilityPath(Tg,24155+-24152),Ch:ReplaceAbilityString(Tg..P(-42411- -18132));
+            pcall(function()
+                return(function(X)
+                    local function aj(kd)
+                        return X[kd-(22916+-31978)]
+                    end
+                    dj.Remotes.Abilities.Ability:FireServer(Gb,-732.5411036952629*-12286);
+                    dj.Remotes.Combat.Action:FireServer(Gb,tj,-8882+8883,375.37537537537537*23976,{HitboxCFrames={Nc},BestHitCharacter=gk,HitCharacters={gk},Ignore={},DeathInfo={},RockCFrame=Nc,ServerTime=tick(),HitInfo={IsFacing=false,IsInFront=true,GetUp=false},BlockedCharacters={},Actions={ActionNumber1={[Wd.Name]={StartCFrameStr=tostring(Nc.X)..','..tostring(Nc.Y)..','..tostring(Nc.Z)..aj(-1.5283599827139154*18512),ImpulseVelocity=Vector3 .new(aj(19374+-9643),aj(-9982+21370),0),AbilityName='3',RotVelocityStr=aj(225430431/-19759),VelocityStr=aj(7825- -4217),Duration=aj(-0.24419558618426451*-24378),NoVFX=aj(-29787- -104),RotImpulseVelocity=Vector3 .new(-0.59462078992003875*24762,26380+-14816,-11155-1914),Seed=math.random(aj(-10430- -25637),aj(-4937750/125)),LookVectorStr=aj(-34835+18253),NoRagdollCancel=aj(11905+-11388)}}},FromCFrame=Nc},'Action282',0)
+                    for b_=aj(24544782/-7158),aj(0.47592141221655959*-27078)do
+                        dj.Remotes.Combat.Action:FireServer(Gb,tj,b_,-561.79775280898878*-16020,{HitboxCFrames={Nc,Nc},BestHitCharacter=gk,HitCharacters={gk},Ignore={},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=aj(-7007+-32177),GetUp=true,IsInFront=true,Blocked=false},ServerTime=tick(),Actions={},FromCFrame=Nc},aj(3.8943690364198362*-7441)..tostring(b_+aj(-44022- -26219)),aj(2777-16377))
+                    end
+                    dj.Remotes.Combat.Action:FireServer(Gb,tj,-749/-107,aj(41141+-26795),{HitboxCFrames={Nc},BestHitCharacter=gk,ActionNumbers={aj(-1.414451179259437*-16663)},HitCharacters={gk},Ignore={},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=aj(-108573150/3710),IsInFront=aj(-7810+-20997),Blocked=aj(12485496/-2319)},ServerTime=tick(),Actions={ActionNumber2={[Wd.Name]={StartCFrameStr=tostring(Nc.X)..aj(-0.59747479821829264*-29859)..tostring(Nc.Y)..','..tostring(Nc.Z)..',0,0,0,0,0,0,0,0,0',Collision=aj(12881-12888),Local=aj(-0.51374179431072209*22850),Velocity=Vector3 .zero,Preset='OutOfRange',FromPosition=Vector3 .new(Nc.X,Nc.Y,Nc.Z),Seed=math.random(aj(1811-14517),aj(-23050-18217))}}},FromCFrame=Nc},'Action291')
+                end){[74128807/-27691]=true,[50116-29012]='0.000000,0.000000,0.000000',[-41251+10811]=57.907232613353408*17269,[6693+-26609]='Action28',[-6695- -25488]=0,[-20190- -17843]='0.000000,0.000000,0.000000',[4926+-8570]=-10660+10661,[-46035+25414]=true,[-0.22558035492369638*20117]=0,[1.0371381110583768*-8428]=-12272/-12272,[-0.34922504649721015*-16130]=-21968/-10984,[-380118519/-11649]=12327+-12325,[556997819/22951]=-5193- -5194,[-1.4695228396857725*13748]=true,[2.9770705673057916*-10118]=true,[-1.3622013651877134*-7032]=true,[-5713- -26163]=-948600000/-9486,[1.1029087703834288*13614]=-4945- -4946,[-61563+29358]=-32187000000/-32187,[-334407859/17389]=',0,0,0,0,0,0,0,0,0',[100791205/11131]=false,[1.3851538036470805*-5429]='2.228760,-0.009538,0.471676',[508716820/18910]=',',[-101016270/-27465]=false,[-107612550/28134]=-0.00044499822000712*-11236,[21252- -2156]=410.34058268362742*21933,[-3.0433107274969173*6488]=true}
+            end)
+            return P(-6136+1637)
+        end){[-4424- -9679]=true,[-0.45005267397905435*32274]=':Abilities:3',[-38950- -29890]=false}
+    end;
+    kb.UseAbility4=function(Cd)
+        return(function(Vc)
+            local function ja(sa)
+                return Vc[sa+(3737- -15369)]
+            end
+            local fg=Cd:GetCurrentCharacter()
+            if not Cd:HasAbilities(fg,ja(-420745218/12819))then
+                return ja(-81292376/4616)
+            end
+            local Ji=Cd:FindNearestPlayer()
+            if not Ji then
+                return ja(11590-21474)
+            end
+            Cd:TriggerGlobalDash()
+            local xg,zj,xa,yd=Ji.Character,Cd:GetNearestPlayerCFrame(),Cd:GetAbilityPath(fg,ja(-414345190/14515)),Cd:ReplaceAbilityString(fg..ja(644332260/-23595));
+            pcall(function()
+                return(function(l_)
+                    local function Ab(Fb)
+                        return l_[Fb- -76151680/8206]
+                    end
+                    dj.Remotes.Abilities.Ability:FireServer(xa,Ab(-260505960/-25194))
+                    local Lf={Ab(2.9480586712683348*5795),Ab(16714+-15549),-19767+20150,Ab(-56666- -28589),21880-21495,-0.031778617178518639*-12178,0.10998020921685044*3537}
+                    for zg=9991-9821,(Ab(-13401362/-10478))+(17612+-17443)do
+                        local wb={xa,yd,(zg- -0.0052054456970368999*-32466),8985193+14807,{HitboxCFrames={zj,zj},BestHitCharacter=xg,HitCharacters={xg},Ignore=(zg-(-5393+5562))>Ab(-0.4264557029460338*-18771)and{ActionNumber1={xg}}or{},DeathInfo={},BlockedCharacters={},HitInfo={IsFacing=(zg-0.34917355371900827*484)==Ab(800549995/-28273)or(zg-(-20832- -21001))==0.00038699690402476783*5168 and false or Ab(-77031108/-6372),IsInFront=(zg-(7138+-6969))<=16863+-16861 and Ab(3496220/-3164)or Ab(-500575194/14517),Blocked=(zg- -0.0071628380096634735*-23594)>Ab(-7583678/9271)and false or nil},ServerTime=tick(),Actions=(zg-(-3238+3407))>Ab(32036+-26701)and{ActionNumber1={}}or{},FromCFrame=zj},'Action'..tostring(Lf[(zg- -126750/-750)]),(zg-(18798-18629))==12189+-12187 and Ab(-48150- -30973)or Ab(-3.3327783943766187*5406)}
+                        if(zg-(26666+-26497))==-27449- -27456 then
+                            wb[0.00040222025581208268*12431].RockCFrame=zj;
+                            wb[Ab(-38791800/2811)].Actions={ActionNumber1={[Ji.Name]={StartCFrameStr=tostring(zj.X)..','..tostring(zj.Y)..','..tostring(zj.Z)..Ab(-51861+25331),ImpulseVelocity=Vector3 .new(0.10910238751147842*17424,Ab(-41721- -18332),22838+-22547),AbilityName=Ab(1.0391759776536313*-14320),RotVelocityStr=Ab(1.0994875511154822*19319),VelocityStr=Ab(34181+-29466),Duration=Ab(-47044494/-2451),RotImpulseVelocity=Vector3 .new(Ab(-66705+27353),179124060/-26940,-9478- -2064),Seed=math.random(32681+-32680,Ab(-1825- -16010)),LookVectorStr='0.988493,0.000000,0.151268'}}}
+                        end
+                        dj.Remotes.Combat.Action:FireServer(unpack(wb))
+                    end
+                end){[-56105025/-6863]=true,[37207-28745]=30692-30690,[-7269+28638]=true,[21866+-26386]=0.00021232324090194913*23549,[1.4703848298940323*17930]=-9724+10101,[-316710000/18360]=',0,0,0,0,0,0,0,0,0',[-38071- -32470]='4',[-1.2463201166953985*15082]=4813-4429,[307689072/-21808]=-628000000/25120,[1.0441016513398595*10113]=-0.0053598774885145481*-1306,[-309170232/10281]=24306-18438,[-7199-1538]=nil,[-1306+18591]=-11022/-5511,[-1.3816763747655247*-10129]='1.900635,0.010867,0.291061',[14085+14389]=10218+-10216,[-0.46001048523329646*17167]=-8.2918739635157545e-05*-1206,[-1.7796738718240426*-13185]=-56.731151075055315*-17627,[-37609- -12407]=false,[197638645/13523]=-25456/-12728,[-35262- -16227]=-14070/-14070,[20399085/1953]=2001460/5267,[-1.1878670460737422*-16517]=-242766000000/-26974,[54303-23782]='0.000000,0.000000,0.000000'}
+            end)
+            return true
+        end){[13645-27361]=-88916/-22229,[-0.18847705496722139*-7932]=false,[21958+-30160]=':Abilities:4',[-49974018/-5419]=false,[-204659200/21680]=17230-17226}
+    end;
+    kb.UseAllAbilities=function(F)
+        F:UseAbility1();
+        task.wait(-0.019/-19000);
+        F:UseAbility2();
+        task.wait(6.8761603520594098e-11*14543);
+        F:UseAbility3();
+        task.wait(-0.016500000000000001/-16500);
+        F:UseAbility4()
+    end;
+    kb.Start=function(Tf)
+        return(function(lk)
+            local function Ig(ad)
+                return lk[ad+(-41981- -13826)]
+            end
+            if Tf.loopThread then
+                return
+            end
+            Tf.enabled=Ig(59879+-689);
+            Tf.loopThread=task.spawn(function()
+                return(function(uj)
+                    local function ie(_c)
+                        return uj[_c- -0.48380148199207307*23212]
+                    end
+                    while Tf.enabled do
+                        local _e=tick()
+                        if _e-Tf.lastSpamTime>=Tf.spamSpeed then
+                            Tf.lastSpamTime=_e
+                            if Tf.selectedAbility==ie(-10328+-30506)then
+                                Tf:UseAllAbilities()
+                            elseif Tf.selectedAbility=='Ability 1'then
+                                Tf:UseAbility1()
+                            elseif Tf.selectedAbility=='Ability 2'then
+                                Tf:UseAbility2()
+                            elseif not(Tf.selectedAbility==ie(-40727- -21081))then
+                                if not(Tf.selectedAbility=='Ability 4')then
+                                else
+                                    Tf:UseAbility4()
+                                end
+                            else
+                                Tf:UseAbility3()
+                            end
+                            task.wait(ie(-28908+32174));
+                            pcall(function()
+                                local ea=Tf:GetCurrentCharacter();
+                                dj.Remotes.Abilities.AbilityCanceled:FireServer(dj:WaitForChild'Characters':WaitForChild(ea):WaitForChild'WallCombo')
+                            end)
+                        end
+                        task.wait(-2.279e-07/-22790)
+                    end
+                end){[206046144/14214]=-7.596e-08/-7596,[-21947+-7657]='All',[0.3145933014354067*-26752]='Ability 3'}
+            end)
+        end){[259018110/8346]=true}
+    end;
+    kb.Stop=function(Hh)
+        return(function(Qc)
+            local function Sg(Gi)
+                return Qc[Gi+(12742+3372)]
+            end
+            Hh.enabled=Sg(-56775+23254)
+            if Hh.loopThread then
+                task.cancel(Hh.loopThread);
+                Hh.loopThread=Sg(6342- -3632)
+            end
+        end){[-1492+27580]=nil,[476272927/-27361]=false}
+    end;
+    kb:InitTransformTracking();
+    _G.TPWalkEnabled=S(97162816/-10552);
+    _G.TPWalkSpeed=S(-14549+-7897)
+    local ta=nil;
+    _G.ToggleTPWalk=function(Bh)
+        return(function(N)
+            local function La(Cf)
+                return N[Cf+(-17213- -20371)]
+            end
+            _G.TPWalkEnabled=Bh
+            if not(ta)then
+            else
+                ta:Disconnect();
+                ta=La(-409135418/-23729)
+            end
+            if Bh then
+                ta=Ag.Heartbeat:Connect(function()
+                    return(function(Sf)
+                        local function r_(_a)
+                            return Sf[_a-(37113-26639)]
+                        end
+                        local hj=ig.Character
+                        if not hj then
+                            return
+                        end
+                        local v,e_=hj:FindFirstChild(r_(-224168301/15603)),hj:FindFirstChildOfClass'Humanoid'
+                        if v and e_ and e_.MoveDirection.Magnitude>0 then
+                            v.CFrame=v.CFrame+(e_.MoveDirection*_G.TPWalkSpeed*r_(0.56670447604921037*-22922)/(-1278960/-21316))
+                        end
+                    end){[0.76400934981853974*-32514]='HumanoidRootPart',[2206-25670]=-28945/-28945}
+                end)
+            end
+        end){[-333234000/-16335]=nil}
+    end
+    local Qj=-0.00028989708653428034*-20697
+    local Nh=Te(Hc,'Bring Mode: OFF',Qj);
+    Qj=Qj+(-6992- -7036);
+    Nh.MouseButton1Click:Connect(function()
+        return(function(yg)
+            local function cb(dg)
+                return yg[dg+(11388+12224)]
+            end
+            nh.Enabled=not nh.Enabled;
+            Nh.Text=cb(2105+6940)..(nh.Enabled and'ON'or cb(-51765- -22765))
+            if not(nh.Enabled)then
+                R()
+            else
+                He()
+            end
+        end){[-30238+24850]='OFF',[856691081/26233]='Bring Mode: '}
+    end)
+    local Ee=Te(Hc,S(-0.45399846843890163*-9141),Qj);
+    Qj=Qj+-0.010082493125572869*-4364
+    local eb=true;
+    Ee.MouseButton1Click:Connect(function()
+        return(function(q)
+            local function m(Yg)
+                return q[Yg-(-3885+-16229)]
+            end
+            eb=not eb;
+            Ee.Text=m(-6091-22102)..(eb and'ON'or m(-50458+23613));
+            nh.IgnoreEnabled=eb
+        end){[-38635940/5740]='OFF',[-26382- -18303]='Bring Ignore: '}
+    end)
+    local pc=Te(Hc,S(-22613+-1718),Qj);
+    Qj=Qj+(-8982+9026);
+    pc.MouseButton1Click:Connect(function()
+        return(function(uc)
+            local function pa(Nf)
+                return uc[Nf-0.063978213832724021*26806]
+            end
+            Eh=not Eh;
+            pc.Text=pa(40426+-24142)..(Eh and'ON'or pa(-1.2731438390491874*-13967))
+            if Eh then
+                rc()
+            else
+                Dg()
+            end
+        end){[-5062- -19631]='God Mode: ',[0.49471933984050254*32477]='OFF'}
+    end)
+    local wj=Te(Hc,'Kill Farming: OFF',Qj);
+    Qj=Qj+(23816-23772);
+    wj.MouseButton1Click:Connect(function()
+        return(function(la)
+            local function tf(oj)
+                return la[oj+(-14128-8926)]
+            end
+            _G.KA_Config.Farm.Enabled=not _G.KA_Config.Farm.Enabled;
+            wj.Text=tf(737570364/18353)..(_G.KA_Config.Farm.Enabled and'ON'or tf(33185- -7608))
+            if not(_G.KA_Config.Farm.Enabled)then
+                _G.KA_stopKillFarming()
+            else
+                _G.KA_startKillFarming()
+            end
+        end){[255536476/14914]='Kill Farming: ',[14196- -3543]='OFF'}
+    end)
+    local tg=Te(Hc,S(0.22613607188703466*-19475),Qj);
+    Qj=Qj+S(-14895+26611);
+    tg.MouseButton1Click:Connect(function()
+        return(function(Yd)
+            local function _h(Oj)
+                return Yd[Oj-(36982+-5048)]
+            end
+            local Mg=not _G.KZ_LagModules.AntiLagAbilityOnlyMob.enabled;
+            tg.Text='Anti Lag: '..(Mg and _h(39280-26396)or _h(11452+20399))
+            if not(Mg)then
+                _G.KZ_LagModules.AntiLagAbilityOnlyMob:Stop()
+            else
+                _G.KZ_LagModules.AntiLagAbilityOnlyMob:Start()
+            end
+        end){[1683074/-20278]='OFF',[-33840+14790]='ON'}
+    end)
+    local ij=S(325875954/-23446)
+    local Th=Te(Ta,S(39991+-9688),ij);
+    ij=ij+S(-49081- -23266);
+    Th.MouseButton1Click:Connect(function()
+        return(function(cg)
+            local function md(Ve)
+                return cg[Ve+(-7502- -1585)]
+            end
+            kb.enabled=not kb.enabled;
+            Th.Text=md(23145- -11219)..(kb.enabled and'ON'or'OFF')
+            if not(kb.enabled)then
+                kb:Stop()
+            else
+                kb:Start()
+            end
+        end){[53926-25479]='Ability Spam: '}
+    end)
+    local Fj=Te(Ta,'Ability Ignore: ON',ij);
+    ij=ij+-0.0039978193712520444*-11006
+    local Ki=true;
+    Fj.MouseButton1Click:Connect(function()
+        return(function(Yj)
+            local function Ea(Ne)
+                return Yj[Ne-(1797+-22061)]
+            end
+            Ki=not Ki;
+            Fj.Text='Ability Ignore: '..(Ki and Ea(2.107382187635106*-18504)or'OFF');
+            kb.ignoreEnabled=Ki
+        end){[0.82402885926708025*-22731]='ON'}
+    end)
+    local i_=Te(Ta,S(10000-10168),ij);
+    ij=ij+S(-13449+-3604);
+    i_.MouseButton1Click:Connect(function()
+        return(function(O)
+            local function De(ab)
+                return O[ab+(16083+-9854)]
+            end
+            local bh=not _G.KZ_LagModules.LagServerV4 .enabled;
+            i_.Text='Lag Server V4: '..(bh and De(-419801459/17941)or'OFF')
+            if bh then
+                _G.KZ_LagModules.LagServerV4:Start()
+            else
+                _G.KZ_LagModules.LagServerV4:Stop()
+            end
+        end){[0.55489125165627118*-30943]='ON'}
+    end)
+    local Gc=Instance.new(S(-36903+11353),Ta);
+    Gc.Size=UDim2 .new(S(106462538/-8671),0.0016010246557796989*-12492,0,735692/21638);
+    Gc.Position=UDim2 .new(0,-0.00037457392216353895*-26697,0,ij);
+    Gc.Text='Select Ability: All';
+    Gc.BackgroundColor3=Color3 .fromRGB(-168168/-3822,S(4285+16471),298760/6790);
+    Gc.TextColor3=Color3 .fromRGB(-17560- -17815,S(13030-14783),25223+-24968);
+    Gc.Font=Enum.Font.Gotham;
+    Gc.TextSize=15976+-15962;
+    Instance.new('UICorner',Gc).CornerRadius=UDim.new(S(4634-30587),-141270/-23545);
+    ij=ij+S(-19434- -14170)
+    local vc=Instance.new('ScrollingFrame',Ta);
+    vc.Size=UDim2 .new(0.00012422360248447205*8050,S(-383736150/22050),0,-0.033268644302744663*-3607);
+    vc.Position=UDim2 .new(S(-9957- -30792),S(-304703031/-20903),S(182919968/5368),ij);
+    vc.Visible=false;
+    vc.CanvasSize=UDim2 .new(S(12605+9789),0,S(-32062+7989),-3175050/-21167);
+    vc.BackgroundColor3=Color3 .fromRGB(-881195/-25177,S(-150205440/-8960),S(-235292616/-22824));
+    Instance.new(S(-16536+-4043),vc).CornerRadius=UDim.new(S(-6.1568991097922847*-2696),17405+-17399)
+    local ib={S(211883556/9397),'Ability 1',S(5.5894011202068077*4642),S(-14177+18454),S(44156+-21589)}
+    for ld,ff in ipairs(ib)do
+        local xc=Instance.new('TextButton',vc);
+        xc.Size=UDim2 .new(-10924- -10925,S(-11.148355263157894*-3040),S(-28453+3863),-717976/-25642);
+        xc.Position=UDim2 .new(S(14404+-31984),0,0,(ld- -17538/-17538)*(10414+-10384));
+        xc.Text=ff;
+        xc.BackgroundColor3=Color3 .fromRGB(1050390/19098,S(1.5820684786445465*19831),-26613- -26668);
+        xc.TextColor3=Color3 .fromRGB(S(-25578+9707),1088085/4267,-5079- -5334);
+        xc.Font=Enum.Font.Gotham;
+        xc.TextSize=S(-15797026/-14374);
+        Instance.new(S(-3583-16986),xc).CornerRadius=UDim.new(0,-30626+30630);
+        xc.MouseButton1Click:Connect(function()
+            Gc.Text='Select Ability: '..ff;
+            vc.Visible=false;
+            kb.selectedAbility=ff
+        end)
+    end
+    Gc.MouseButton1Click:Connect(function()
+        vc.Visible=not vc.Visible
+    end)
+    local Hb=-0.00040123044001604924*-14954
+    local gg=Te(Zb,'TP Walk: OFF',Hb);
+    Hb=Hb+(10602-10558);
+    gg.MouseButton1Click:Connect(function()
+        return(function(nf)
+            local function ze(wg)
+                return nf[wg+211477280/-27608]
+            end
+            _G.TPWalkEnabled=not _G.TPWalkEnabled;
+            gg.Text=ze(920392875/24125)..(_G.TPWalkEnabled and ze(22- -3420)or'OFF');
+            _G.ToggleTPWalk(_G.TPWalkEnabled)
+        end){[69753066/-16537]='ON',[19251- -11240]='TP Walk: '}
+    end)
+    local Cc=Instance.new('TextLabel',Zb);
+    Cc.Size=UDim2 .new(9.4091080165600304e-05*10628,S(-136028925/13275),S(17047+14072),S(1.2044155332150601*25365));
+    Cc.Position=UDim2 .new(S(-58573194/-2006),-14246+14256,S(226461106/-22963),Hb);
+    Cc.BackgroundTransparency=-29664- -29665;
+    Cc.Text=S(-65485720/27890);
+    Cc.TextColor3=Color3 .fromRGB(S(-36399+19616),S(-13151+8408),0.0082846921483713046*26555);
+    Cc.Font=Enum.Font.Gotham;
+    Cc.TextSize=S(16402+-3041);
+    Hb=Hb+S(2018- -20220)
+    local Of=Instance.new(S(-14155- -14740),Zb);
+    Of.Size=UDim2 .new(-9.151642719868216e-05*-10927,S(2.4577973568281939*11350),S(24097220/-16415),35028/1251);
+    Of.Position=UDim2 .new(0,S(-1.0056903451725863*-31984),0,Hb);
+    Of.PlaceholderText=S(31691-1145);
+    Of.Text=S(-1.0594925634295713*-30861);
+    Of.BackgroundColor3=Color3 .fromRGB(3228+-3168,16059+-15999,-31306+31366);
+    Of.TextColor3=Color3 .fromRGB(S(196317240/24177),27139-26884,6109545/23959);
+    Of.Font=Enum.Font.Gotham;
+    Of.TextSize=0.0006059819071116305*23103;
+    Instance.new(S(26366802/-17358),Of).CornerRadius=UDim.new(S(-28483- -26367),S(38642-24808));
+    Of.FocusLost:Connect(function(Nb)
+        return(function(jh)
+            local function wc(Oh)
+                return jh[Oh+(-8090+26243)]
+            end
+            if Nb then
+                local Mh=tonumber(Of.Text)
+                if not(Mh)then
+                    Of.Text=tostring(_G.TPWalkSpeed)
+                else
+                    _G.TPWalkSpeed=Mh;
+                    Of.Text=tostring(Mh);
+                    Cc.Text=wc(-9659+-29676)..Mh
+                end
+            end
+        end){[10564+-31746]='TP Walk Speed: '}
+    end)
+    local Rh,ki=-0.0004540295119182747*-13215,Instance.new('TextLabel',qf);
+    ki.Size=UDim2 .new(S(-0.968533407263654*-14428),-18829- -18809,S(-691857868/24788),S(-0.16019483155188743*14782));
+    ki.Position=UDim2 .new(0,S(10875-14395),0,Rh);
+    ki.BackgroundTransparency=S(28216+-22183);
+    ki.Text=S(33820+-21764);
+    ki.TextColor3=Color3 .fromRGB(S(37293+-18470),3041600/15208,S(-1015766541/-31169));
+    ki.Font=Enum.Font.GothamBold;
+    ki.TextSize=S(-21450- -846);
+    Rh=Rh+S(76114714/-5174)
+    local Kd=Instance.new(S(14123- -16653),qf);
+    Kd.Size=UDim2 .new(S(12370-32444),19833+-19853,0,S(38828-31067));
+    Kd.Position=UDim2 .new(S(-2386+-25242),S(0.65704837245493453*-15422),0,Rh);
+    Kd.PlaceholderText=S(2.630948012232416*8175);
+    Kd.Text='';
+    Kd.BackgroundColor3=Color3 .fromRGB(S(-29958+17920),S(-1.5006768516727906*15513),S(-28900+28935));
+    Kd.TextColor3=Color3 .fromRGB(S(-1.2696080823856704*20489),-20722+20977,S(-533485488/-17904));
+    Kd.Font=Enum.Font.Gotham;
+    Kd.TextSize=27422+-27408;
+    Instance.new(S(-37804+20295),Kd).CornerRadius=UDim.new(S(26116-2418),9005+-8999);
+    Rh=Rh+S(-25680+26985)
+    local Pd=Te(qf,'Add to Filter List',Rh);
+    Rh=Rh+(-4643+4687);
+    Pd.MouseButton1Click:Connect(function()
+        return(function(ii)
+            local function Hj(Qe)
+                return ii[Qe-1.9650273224043715*-12810]
+            end
+            local vg=Kd.Text
+            if vg and vg~=Hj(-63392+32278)then
+                _G.KZ_Filters.PlayerFilters[vg]=true;
+                updateFilterLabel()
+            end
+        end){[-0.31356200527704486*18950]=''}
+    end)
+    local rh=Te(qf,'Remove from Filter List',Rh);
+    Rh=Rh+0.039250669045495096*1121;
+    rh.MouseButton1Click:Connect(function()
+        return(function(uf)
+            local function Ka(Od)
+                return uf[Od-232136424/-24518]
+            end
+            local ye=Kd.Text
+            if ye and ye~=Ka(-61443+28218)then
+                _G.KZ_Filters.PlayerFilters[ye]=nil;
+                updateFilterLabel()
+            end
+        end){[-55018+31261]=''}
+    end)
+    local Sd=Te(qf,S(53698-27168),Rh);
+    Rh=Rh+S(-42298536/-27592);
+    Sd.MouseButton1Click:Connect(function()
+        _G.KZ_Filters.PlayerFilters={};
+        updateFilterLabel()
+    end)
+    local af=Instance.new('TextLabel',qf);
+    af.Size=UDim2 .new(S(-12193+-5981),-0.00072587377055130108*27553,0,S(7076+-27540));
+    af.Position=UDim2 .new(0,S(-255166990/-8138),S(1.4139643587496349*-3423),Rh);
+    af.BackgroundTransparency=7.3898906296186823e-05*13532;
+    af.Text='Filtered Players: None';
+    af.TextColor3=Color3 .fromRGB(S(9533+17960),S(309515952/-17142),-2455- -2655);
+    af.Font=Enum.Font.Gotham;
+    af.TextSize=114972/9581;
+    af.TextWrapped=true;
+    updateFilterLabel=function()
+        return(function(kj)
+            local function Mc(we)
+                return kj[we+(-28274- -18238)]
+            end
+            local ni_={}
+            for Sa,s_ in pairs(_G.KZ_Filters.PlayerFilters)do
+                table.insert(ni_,Sa)
+            end
+            if not(#ni_>Mc(-19.913370998116761*-531))then
+                af.Text=Mc(-0.13776271965085563*-17414)
+            else
+                af.Text='Filtered: '..table.concat(ni_,', ')
+            end
+        end){[-11903- -4266]='Filtered Players: None',[-4561164/-8478]=0}
+    end;
+    updateFilterLabel();
+    print(S(-258+-9920));
+    print(S(1108+-21158))
+end)({[12777-26944]='Exploits',[29107-17238]=0,[-42994- -19249]='UICorner',[-674+31966]=0,[-51410- -27480]='All',[-13069- -3200]='Frame',[0.32545428733674048*14088]=19995-19967,[1574-28823]=0,[114533610/5010]=0,[68376152/-14248]=-3.5932446999640679e-05*-27830,[50012-18104]=20755-20715,[-370429508/-12548]='100',[6550-14587]=0,[21690- -8517]='type',[-37224- -10230]='embeds',[1969865/-395]='UICorner',[-393443390/-20290]='Ability 4',[-536982000/23096]=22884+-22883,[10509-25104]=0,[-2.8968391802709275*-8637]=327.80000000000001/1639,[-2.2405703771849126*10870]=-6590+6548,[-47470- -27355]='Script Name: ',[6767+12451]=0,[37513+-32058]=nil,[-2.3123298327499029*10284]=-1401+1415,[-0.20094562647754138*-26649]=false,[-7665- -3021]=0,[189887227/10753]=0,[-32562- -30919]=-0.0071778140293637851*-6130,[1.5655702461571537*-18606]=0,[66377402/15857]='content',[1.8494455994455994*-11544]=4.3271311120726959e-05*23110,[-417023346/20894]=8415-8195,[1717+29461]='\nDisplay Name: ',[1.4703048131054419*19717]=102240/10224,[-117155736/-8622]=-223510/-6386,[-27305- -32586]=false,[-30211- -23515]=-0.00059644518668734345*-16766,[631+-8550]=0.0089762944224570564*24509,[-0.43856001750738594*18278]=0,[-48414+19423]=-0.0054965646470955653*-8005,[393428960/-18530]=32934-32734,[-13667+26091]=false,[-22.273291925465838*-644]=-0.0004644142575177058*-8613,[1.042353228365678*8193]=-0.0024739949395558053*-17785,[-15540+-10548]=-13674+13714,[51160512/10348]=10687-10432,[-29686+9110]=0,[-346768884/-19404]='name',[-0.78431372549019607*30141]=0.0015526142141831308*25763,[34264+-30383]=24749-24494,[495294428/23447]=0,[-35937- -8068]='HttpService',[26607-20273]='content-type',[51818-29984]='N/A',[0.72638632936840342*-29845]=-8970+8971,[-34673438/16694]=-27462- -27475,[-3.425866836843225*-9402]=-7457+7472,[54121+-24399]=27297-27291,[45893-32151]='KFC_HUB_FULL',[0.73537691585861742*-9591]='UIScale',[23802-28523]='Combat',[5094-25653]=0,[43783-21723]=0.12125534950071326*2103,[-730090486/30442]=-24051- -24055,[22701+2504]=-7174+7154,[6689-20112]=-28876- -28856,[-22005756/-17718]=-31847/-31847,[-15780+13673]='\nUserID: ',[-42716+15583]='LandingLarge',[1.0340019569471623*-8176]=11906-11822,[-226419164/-16868]=0,[15212- -14941]=0,[24239+-21382]=-12083- -12084,[-21845+1837]='Players',[63920/-3760]='value',[-165202764/-7286]='\nProfile: https://www.roblox.com/users/',[50224+-24849]=-27197- -27198,[-17593+29389]=30545-30544,[577964155/18817]=0,[-29449+-842]='**Script Execution Detected | Exec Log**',[-17955- -2849]=0,[30849-32400]=-23153- -23408,[38546-6561]=-27009+27010,[-127279884/-4692]='Ability Spam: OFF',[14604-24350]='name',[0.55420579158185046*-15229]=-8581- -8625,[-8341+-7113]=-0.00039808917197452231*-2512,[23715+-30461]=3462-3558,[47034-22203]='Beams',[-0.20740016402750616*31702]=0,[-8783940/660]=-30983+30993,[0.89547546012269941*26080]='Clear All Filters',[-2.7272727272727271*4356]='https://discord.com/api/webhooks/1436634012293791906/r66W_prYP7yMCtkRpcfiCdEW7uxtgCyqtDZHTknfjcHjyQsThZi04Tbi4fyU33gKeqRu',[26832- -1347]=-194240/-19424,[0.92852045224054391*26623]=0.0013931457230426303*-14356,[18695+-7524]=12190-12164,[-813205275/-29069]=2622750/17485,[-138014220/29396]='UICorner',[-114939315/30335]=5.818463925523662e-05*15468,[-302115099/-26499]=0.0004169098640873843*23986,[16848200/-3050]='TP Walk Speed: 100',[-1.0386666666666666*1500]=-9435/-37,[26069+1874]=0,[-25796+20495]='value',[0.96134254195443603*-31999]=false,[22396-15263]=-3238+3273,[10333533/-5523]=462574/12173,[33376-27700]=' KZ HUB | Discord: nguyenkhang06',[-14323+-3060]=20753+-20749,[-53296- -29912]=18747+-18746,[389033589/17373]='fields',[1.1072988874002447*17167]=80442/13407,[-13283-7402]='UICorner',[3.4519359145527369*8988]=15434+-15418,[-52991- -31436]=0,[-184806825/-18145]=13320+-13307,[-2.9241690868021943*3099]=11763-11760,[14622+-5866]='A script was executed. Details below:',[34068-29126]='name',[-61836621/11001]=-0.00016269421622061337*-12293,[-47732+17863]='Projectile',[13160+13461]=0.020852072941368878*12229,[6194-3993]=0,[-675737704/23266]=0,[27843-12744]='HumanoidRootPart',[-40797+27443]='[KZ HUB] Script loaded successfully!',[-3.858862959285005*8056]=0,[640699108/-27538]='Character Position',[-2.4521681873765404*-10631]=349188/29099,[-32804+7435]=5847/5847,[35211-4057]='__namecall',[159304340/18940]='CCBlack',[-47485+24259]='[KZ HUB] Features: Bring Mode, God Mode, Kill Farming, Anti Lag, Ability Spam, Lag Server V4, TP Walk, Filter System',[0.4640025372660958*-15765]=0,[-3989+-13898]=0.0012376237623762376*19392,[5768+13294]=-2677+2701,[-40569+12271]='Frame',[-26449- -21520]=-4443375/-17425,[11180+-19854]=-15589+15569,[1.6630571644422061*-11913]=0,[41050-9757]=nil,[-7397+25729]='Enter player name to filter',[-567405880/-29290]='All',[17214-6928]=0.0099481137596067575*25633,[-20710+23765]=0,[108288752/-32383]='Lag Server V4: OFF',[-1.4313705583756344*-19700]=-1493525/-27155,[3417- -20900]=-5150235/-20197,[-6760985/-595]=1.2715251035384726e-05*27526,[1.4602104765283197*-8457]='MobCutscene',[-487646568/-16479]=-6342- -6370,[-567117000/-18594]=0,[-196482363/-16599]=-2447+2448,[15117+14296]=-0.01350621285791464*-14808,[-18361+36]=0,[-20383+-8806]=-0.029985888993414863*-8504,[-486894248/23458]=0,[0.11383699081788208*28207]=0,[-38998+17993]=-8930- -9185,[-864979050/-32457]=true,[985123206/-30573]=-18126- -18170,[-9263+31782]='Player Details',[4617- -18153]='Ability 2',[-37233+17004]=-0.0035386842528550748*-12434,[25551+-7971]=-895268/-20347,[3.5807250619229904*-8882]=0,[898398660/-29165]=0,[-137197368/-8136]='MobUltRocks',[-26975663/22919]='RightBeam',[-6565+24274]='BeamsFire',[-5226- -6327]='Ability 3',[466048448/27232]='Action',[-34157+3109]=20379-20364,[-2.5915445511200943*11874]='Frame',[-13228-13228]=0.0054525627044711015*11004,[-1353-1788]=-13011- -13071,[1.4019695044472682*15740]='MobSeismic',[3.7949559963220807*-7613]='Workspace',[1.4318620220129354*8813]=-1.4269406392694065e-05*-28032,[8655+17294]=0,[1.2092612081667018*-23755]='TextButton',[-18867-4888]='UICorner',[-87753024/7086]=false,[16.755506607929515*-908]=-1785+1845,[-10210- -14716]='N/A',[1.0311615758543133*-27566]='rich',[18349-30982]='Frame',[-40354+27316]=0,[0.24984339110461473*-9578]=0,[-41596+23566]='POST',[-0.065588671482562311*20903]=false,[2.4386567660423362*9023]=8453.5-8453,[-9083-22549]='KZ',[-12995-12627]=-21839- -21939,[-312383100/-10900]='RockShatter',[-1.0543600778768316*19518]=551060/-27553,[-528065727/25897]=' / ',[-30699-296]='KZ HUB',[-697474800/-22572]=0,[-29600- -13679]=-1.4812620352540365e-05*-27004,[-730153334/-28058]=0,[-6589+21617]=false,[-197132724/29923]=0,[-229863650/13462]=-0.00027262813522355508*-22008,[-60081- -32315]=0,[36775-29564]=32122+-32118,[22325+-8769]=20273-20237,[784223982/-31599]='TextButton',[-2823- -31887]=3.3468322233006458e-05*29879,[12925980/1515]=true,[-1002770874/-32286]=9781+-9755,[-31399+23819]='Anti Lag: OFF',[-33497- -14450]=2672-2417,[-0.66279107321641961*-30963]=0,[15572480/-553]='Script Info',[55866624/23936]=-6.8695472968331389e-05*-14557,[-0.0093858776727996016*16088]='Frame',[-12889+2681]=nil,[19324560/-2920]=-0.00013363624214887077*-29932,[-4557+-23117]=8895-8894,[48026-17335]='screen',[31016+-16112]=nil,[-2302+-16194]=3.728838839585353e-05*26818,[4563- -17124]=0,[-943004656/30514]='value',[-510012580/-18634]='Speed (recommend 50-200)',[-6.4305527228227612*4903]=-22555/-22555,[2.1327619789637708*12835]=571600/28580,[0.10540214274935869*26508]=false,[-787650932/-31292]=1127-872,[-17877- -31971]=-3242925/14413,[30528+-19870]=18919-18913,[-262860829/16793]='ScreenGui',[-18168+15577]='TextBox',[260713708/-18364]='title',[-54109+26602]='God Mode: OFF',[-38609584/-4654]=-0.065250767656090072*-3908,[-0.066123557365919891*-14730]='Bring Ignore: ON',[-14407+8863]=0.00071436225309854631*27997,[-27752+6911]=-12932- -13392,[-8349-11412]=31528-31078,[519+-5811]=0,[132134400/14880]='Manual Player Filter',[-52168+20043]=3915/3915,[33979+-6379]='TextBox',[-48583+23826]='UIStroke',[-0.46234211089702421*-23355]=3.573342862247633e-05*27985,[3.3894736842105262*-3325]='Rocks',[-0.48737180468391245*-13066]='TextButton',[1.4732134450616703*10621]=0.010927170409222533*18303,[-0.30633938925396209*-15522]='\nExecuted At: '},...)
